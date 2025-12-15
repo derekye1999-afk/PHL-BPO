@@ -1,0 +1,1740 @@
+<html lang="zh-CN"><head><script>(function(firebaseConfig, initialAuthToken, appId) {
+        window.__firebase_config = firebaseConfig;
+        window.__initial_auth_token = initialAuthToken;
+        window.__app_id = appId;
+            })("\n{\n  \"apiKey\": \"AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY\",\n  \"authDomain\": \"bard-frontend.firebaseapp.com\",\n  \"projectId\": \"bard-frontend\",\n  \"storageBucket\": \"bard-frontend.firebasestorage.app\",\n  \"messagingSenderId\": \"175205271074\",\n  \"appId\": \"1:175205271074:web:2b7bd4d34d33bf38e6ec7b\"\n}\n","eyJhbGciOiJSUzI1NiIsImtpZCI6ImQ4ZWQ3YTU3YzkyMTgwYzk0YjI2MzE3ZjMzYjY5MWE4MWRlNzYzNTEiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIxODQ0NTExMjUxMjg0NDk1MTA5NiIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiJjXzg2NzU3YTI0M2UyNjk3Nzlf6I-y5b6L5a6-QlBP5Luq6KGo55uYX3Y0Nl9GaXhlZC5odG1sLTI5MSJ9LCJleHAiOjE3NjU2NjI0ODYsImlhdCI6MTc2NTY1ODg4NiwiYWxnIjoiUlMyNTYifQ.m-16jRvdQp-kb0HLNjn680iMuA2jJjIPdMvGVVnpogOdanHM7Wqef9wVupveVPfK2MCY97poyIDlJZWF73iWQHsv6YYkRpAl7p-SPVE8gCLWcNyAauMrlj4y8Xg0RXQlPQmaH7U-tEG3tWtMZb63DCfO_m1B9tIkpirvvMbX00JhPwrGIIEbibvIRqzwj-lW1v7vQhfeBPq5C5oq_12Paveb1qDIE1Ujgor2_Y7Z4_SQGL9n3TRRdalEvBoozW7Va7sqzJ0Gh_6RMBKKhgS6lW8bOv6eee6MKjeLmIhP_E9ZvmnYr1LgXqz-RyFCV9B4inFYDBl9z8MMAvix2Qb_sw","c_86757a243e269779_菲律宾BPO仪表盘_v46_Fixed.html-291")</script><script>'use strict';var h=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,d){if(a==Array.prototype||a==Object.prototype)return a;a[b]=d.value;return a};function l(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var d=a[b];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");}var n=l(this);
+function p(a,b){if(b)a:{var d=n;a=a.split(".");for(var c=0;c<a.length-1;c++){var e=a[c];if(!(e in d))break a;d=d[e]}a=a[a.length-1];c=d[a];b=b(c);b!=c&&b!=null&&h(d,a,{configurable:!0,writable:!0,value:b})}}function r(a){function b(c){return a.next(c)}function d(c){return a.throw(c)}return new Promise(function(c,e){function f(g){g.done?c(g.value):Promise.resolve(g.value).then(b,d).then(f,e)}f(a.next())})}function t(a){return r(a())}
+p("Object.values",function(a){return a?a:function(b){var d=[],c;for(c in b)Object.prototype.hasOwnProperty.call(b,c)&&d.push(b[c]);return d}});p("Array.prototype.includes",function(a){return a?a:function(b,d){var c=this;c instanceof String&&(c=String(c));var e=c.length;d=d||0;for(d<0&&(d=Math.max(d+e,0));d<e;d++){var f=c[d];if(f===b||Object.is(f,b))return!0}return!1}});/*
+
+ MIT License
+
+ Copyright (c) 2017-2023 W.Y.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+*/
+function u(a,b){const d=a.style;b.backgroundColor&&(d.backgroundColor=b.backgroundColor);b.width&&(d.width=`${b.width}px`);b.height&&(d.height=`${b.height}px`);const c=b.style;c!=null&&Object.keys(c).forEach(e=>{d[e]=c[e]})};var v=(()=>{let a=0;return()=>{a+=1;return`u${`0000${(Math.random()*1679616<<0).toString(36)}`.slice(-4)}${a}`}})();function w(a){const b=[];for(let d=0,c=a.length;d<c;d++)b.push(a[d]);return b}let x=null;function y(a={}){return x?x:a.l?x=a.l:x=w(window.getComputedStyle(document.documentElement))}function z(a,b){return(a=(a.ownerDocument.defaultView||window).getComputedStyle(a).getPropertyValue(b))?parseFloat(a.replace("px","")):0}
+function A(a,b={}){var d;if(!(d=b.width)){d=z(a,"border-left-width");var c=z(a,"border-right-width");d=a.clientWidth+d+c}(b=b.height)||(b=z(a,"border-top-width"),c=z(a,"border-bottom-width"),b=a.clientHeight+b+c);return{width:d,height:b}}function B(a){return new Promise((b,d)=>{const c=new Image;c.onload=()=>{c.decode().then(()=>{requestAnimationFrame(()=>b(c))})};c.onerror=d;c.crossOrigin="anonymous";c.decoding="async";c.src=a})}
+function C(a){return t(function*(){return Promise.resolve().then(()=>(new XMLSerializer).serializeToString(a)).then(encodeURIComponent).then(b=>`data:image/svg+xml;charset=utf-8,${b}`)})}
+function D(a,b,d){return t(function*(){const c=document.createElementNS("http://www.w3.org/2000/svg","svg"),e=document.createElementNS("http://www.w3.org/2000/svg","foreignObject");c.setAttribute("width",`${b}`);c.setAttribute("height",`${d}`);c.setAttribute("viewBox",`0 0 ${b} ${d}`);e.setAttribute("width","100%");e.setAttribute("height","100%");e.setAttribute("x","0");e.setAttribute("y","0");e.setAttribute("externalResourcesRequired","true");c.appendChild(e);e.appendChild(a);return C(c)})}
+var E=(a,b)=>{if(a instanceof b)return!0;a=Object.getPrototypeOf(a);return a===null?!1:a.constructor.name===b.name||E(a,b)};function F(a,b){return y(b).map(d=>{const c=a.getPropertyValue(d),e=a.getPropertyPriority(d);return`${d}: ${c}${e?" !important":""};`}).join(" ")}
+function G(a,b,d,c){a=window.getComputedStyle(a,d);var e=a.getPropertyValue("content");if(e!==""&&e!=="none"){var f=v();try{b.className=`${b.className} ${f}`}catch(k){return}e=document.createElement("style");var g=e.appendChild;d=`.${f}:${d}`;a.cssText?(c=a.getPropertyValue("content"),c=`${a.cssText} content: '${c.replace(/'|"/g,"")}';`):c=F(a,c);g.call(e,document.createTextNode(`${d}{${c}}`));b.appendChild(e)}};function H(a){return a.search(/^(data:)/)!==-1}function I(a,b,d){return t(function*(){const c=yield fetch(a,b);if(c.status===404)throw Error(`Resource "${c.url}" not found`);const e=yield c.blob();return new Promise((f,g)=>{const k=new FileReader;k.onerror=g;k.onloadend=()=>{try{f(d({o:c,result:k.result}))}catch(m){g(m)}};k.readAsDataURL(e)})})}const J={};function K(a,b,d){let c=a.replace(/\?.*/,"");d&&(c=a);/ttf|otf|eot|woff2?/i.test(c)&&(c=c.replace(/.*\//,""));return b?`[${b}]${c}`:c}
+function L(a,b,d){return t(function*(){const c=K(a,b,d.C);if(J[c]!=null)return J[c];d.u&&(a+=(/\?/.test(a)?"&":"?")+(new Date).getTime());let e;try{const f=yield I(a,d.i,({o:g,result:k})=>{b||(b=g.headers.get("Content-Type")||"");return k.split(/,/)[1]});e=`data:${b};base64,${f}`}catch(f){e=d.B||""}return J[c]=e})};const M={P:"application/font-woff",R:"application/font-woff",N:"application/font-truetype",v:"application/vnd.ms-fontobject",H:"image/png",F:"image/jpeg",D:"image/jpeg",A:"image/gif",M:"image/tiff",L:"image/svg+xml",O:"image/webp"};function N(a){return(a=/\.([^./]*?)$/g.exec(a))?a[1]:""};function O(a){return t(function*(){const b=a.toDataURL();return b==="data:,"?a.cloneNode(!1):B(b)})}function aa(a,b){return t(function*(){if(a.currentSrc){var d=document.createElement("canvas");const c=d.getContext("2d");d.width=a.clientWidth;d.height=a.clientHeight;c==null||c.drawImage(a,0,0,d.width,d.height);d=d.toDataURL();return B(d)}d=a.poster;d=yield L(d,M[N(d).toLowerCase()]||"",b);return B(d)})}
+function ba(a,b){return t(function*(){try{let d;if(a==null?0:(d=a.contentDocument)==null?0:d.body)return yield P(a.contentDocument.body,b,!0)}catch(d){}return a.cloneNode(!1)})}function ca(a,b){return t(function*(){return E(a,HTMLCanvasElement)?O(a):E(a,HTMLVideoElement)?aa(a,b):E(a,HTMLIFrameElement)?ba(a,b):a.cloneNode(a.tagName!=null&&a.tagName.toUpperCase()==="SVG")})}
+function da(a,b,d){return t(function*(){if(b.tagName!=null&&b.tagName.toUpperCase()==="SVG")return b;let c=[];if(a.tagName!=null&&a.tagName.toUpperCase()==="SLOT"&&a.assignedNodes)c=w(a.assignedNodes());else{let e;if(E(a,HTMLIFrameElement)&&((e=a.contentDocument)==null?0:e.body))c=w(a.contentDocument.body.childNodes);else{let f;c=w(((f=a.shadowRoot)!=null?f:a).childNodes)}}if(c.length===0||E(a,HTMLVideoElement))return b;yield c.reduce((e,f)=>e.then(()=>P(f,d)).then(g=>{g&&b.appendChild(g)}),Promise.resolve());
+return b})}function ea(a,b,d){const c=b.style;if(c){var e=window.getComputedStyle(a);e.cssText?(c.cssText=e.cssText,c.transformOrigin=e.transformOrigin):y(d).forEach(f=>{let g=e.getPropertyValue(f);f==="font-size"&&g.endsWith("px")&&(g=`${Math.floor(parseFloat(g.substring(0,g.length-2)))-.1}px`);E(a,HTMLIFrameElement)&&f==="display"&&g==="inline"&&(g="block");f==="d"&&b.getAttribute("d")&&(g=`path(${b.getAttribute("d")})`);c.setProperty(f,g,e.getPropertyPriority(f))})}}
+function fa(a,b){E(a,HTMLSelectElement)&&(b=Array.from(b.children).find(d=>a.value===d.getAttribute("value")))&&b.setAttribute("selected","")}
+function ha(a,b){return t(function*(){var d=a.querySelectorAll?a.querySelectorAll("use"):[];if(d.length===0)return a;var c={};for(var e=0;e<d.length;e++){var f=d[e].getAttribute("xlink:href");if(f){const g=document.querySelector(f);a.querySelector(f)||!g||c[f]||(c[f]=yield P(g,b,!0))}}d=Object.values(c);if(d.length){c=document.createElementNS("http://www.w3.org/1999/xhtml","svg");c.setAttribute("xmlns","http://www.w3.org/1999/xhtml");c.style.position="absolute";c.style.width="0";c.style.height="0";
+c.style.overflow="hidden";c.style.display="none";e=document.createElementNS("http://www.w3.org/1999/xhtml","defs");c.appendChild(e);for(f=0;f<d.length;f++)e.appendChild(d[f]);a.appendChild(c)}return a})}
+function P(a,b,d){return t(function*(){return d||!b.filter||b.filter(a)?Promise.resolve(a).then(c=>ca(c,b)).then(c=>da(a,c,b)).then(c=>{E(c,Element)&&(ea(a,c,b),G(a,c,":before",b),G(a,c,":after",b),E(a,HTMLTextAreaElement)&&(c.textContent=a.value),E(a,HTMLInputElement)&&c.setAttribute("value",a.value),fa(a,c));return c}).then(c=>ha(c,b)):null})};const Q=/url\((['"]?)([^'"]+?)\1\)/g,ia=/url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,ja=/src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;function ka(a){const b=[];a.replace(Q,(d,c,e)=>{b.push(e);return d});return b.filter(d=>!H(d))}
+function la(a,b,d,c){return t(function*(){try{const e=d?(new URL(b,d||void 0)).toString():b;let f;f=yield L(e,M[N(b).toLowerCase()]||"",c);return a.replace(new RegExp(`(url\\(['"]?)(${b.replace(/([.*+?^${}()|\[\]\/\\])/g,"\\$1")})(['"]?\\))`,"g"),`$1${f}$3`)}catch(e){}return a})}function ma(a,{I:b}){return b?a.replace(ja,d=>{for(;;){const [c,,e]=ia.exec(d)||[],f=c,g=e;if(!g)return"";if(g===b)return`src: ${f};`}}):a}
+function R(a,b,d){return t(function*(){if(a.search(Q)===-1)return a;const c=ma(a,d);return ka(c).reduce((e,f)=>e.then(g=>la(g,f,b,d)),Promise.resolve(c))})};function S(a,b,d){return t(function*(){var c;const e=(c=b.style)==null?void 0:c.getPropertyValue(a);return e?(c=yield R(e,null,d),b.style.setProperty(a,c,b.style.getPropertyPriority(a)),!0):!1})}function na(a,b){return t(function*(){(yield S("background",a,b))||(yield S("background-image",a,b));(yield S("mask",a,b))||(yield S("-webkit-mask",a,b))||(yield S("mask-image",a,b))||(yield S("-webkit-mask-image",a,b))})}
+function oa(a,b){return t(function*(){const d=E(a,HTMLImageElement);if(d&&!H(a.src)||E(a,SVGImageElement)&&!H(a.href.baseVal)){var c=d?a.src:a.href.baseVal,e=yield L(c,M[N(c).toLowerCase()]||"",b);yield new Promise((f,g)=>{a.onload=f;a.onerror=b.m?(...k)=>{try{f(b.m(...k))}catch(m){g(m)}}:g;a.decode&&(a.decode=f);a.loading==="lazy"&&(a.loading="eager");d?(a.srcset="",a.src=e):a.href.baseVal=e})}})}
+function pa(a,b){return t(function*(){const d=w(a.childNodes).map(c=>T(c,b));yield Promise.all(d).then(()=>a)})}function T(a,b){return t(function*(){E(a,Element)&&(yield na(a,b),yield oa(a,b),yield pa(a,b))})};const U={};function V(a){return t(function*(){var b=U[a];if(b!=null)return b;b=yield(yield fetch(a)).text();b={url:a,cssText:b};return U[a]=b})}function W(a,b){return t(function*(){let d=a.cssText;const c=/url\(["']?([^"')]+)["']?\)/g,e=(d.match(/url\([^)]+\)/g)||[]).map(f=>t(function*(){let g=f.replace(c,"$1");g.startsWith("https://")||(g=(new URL(g,a.url)).href);return I(g,b.i,({result:k})=>{d=d.replace(f,`url(${k})`);return[f,k]})}));return Promise.all(e).then(()=>d)})}
+function X(a){if(a==null)return[];const b=[];a=a.replace(/(\/\*[\s\S]*?\*\/)/gi,"");for(var d=RegExp("((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})","gi");;){var c=d.exec(a);if(c===null)break;b.push(c[0])}a=a.replace(d,"");d=/@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi;for(c=RegExp("((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})","gi");;){let e=d.exec(a);if(e===null)if(e=c.exec(a),e===null)break;else d.lastIndex=c.lastIndex;else c.lastIndex=
+d.lastIndex;b.push(e[0])}return b}
+function qa(a,b){return t(function*(){const d=[],c=[];a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach((f,g)=>{if(f.type===CSSRule.IMPORT_RULE){let k=g+1;f=V(f.href).then(m=>W(m,b)).then(m=>X(m).forEach(q=>{try{e.insertRule(q,q.startsWith("@import")?k+=1:e.cssRules.length)}catch(Da){}})).catch(()=>{});c.push(f)}})}catch(f){const g=a.find(k=>k.href==null)||document.styleSheets[0];e.href!=null&&c.push(V(e.href).then(k=>W(k,b)).then(k=>X(k).forEach(m=>{g.insertRule(m,g.cssRules.length)})).catch(()=>
+{}))}});return Promise.all(c).then(()=>{a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach(f=>{d.push(f)})}catch(f){}});return d})})}function ra(a){return a.filter(b=>b.type===CSSRule.FONT_FACE_RULE).filter(b=>b.style.getPropertyValue("src").search(Q)!==-1)}function sa(a,b){return t(function*(){if(a.ownerDocument==null)throw Error("Provided element is not within a Document");var d=w(a.ownerDocument.styleSheets);d=yield qa(d,b);return ra(d)})}
+function ta(a){function b(c){(c.style.fontFamily||getComputedStyle(c).fontFamily).split(",").forEach(e=>{d.add(e.trim().replace(/["']/g,""))});Array.from(c.children).forEach(e=>{e instanceof HTMLElement&&b(e)})}const d=new Set;b(a);return d}function ua(a,b){return t(function*(){const d=yield sa(a,b),c=ta(a);return(yield Promise.all(d.filter(e=>c.has(e.style.fontFamily.trim().replace(/["']/g,""))).map(e=>R(e.cssText,e.parentStyleSheet?e.parentStyleSheet.href:null,b)))).join("\n")})}
+function va(a,b){return t(function*(){const d=b.j!=null?b.j:b.K?null:yield ua(a,b);if(d){const c=document.createElement("style");c.appendChild(document.createTextNode(d));a.firstChild?a.insertBefore(c,a.firstChild):a.appendChild(c)}})};function wa(a,b={}){return t(function*(){const {width:d,height:c}=A(a,b),e=yield P(a,b,!0);yield va(e,b);yield T(e,b);u(e,b);return yield D(e,d,c)})}
+function xa(a,b={}){return t(function*(){const {width:d,height:c}=A(a,b);var e=yield wa(a,b);e=yield B(e);const f=document.createElement("canvas"),g=f.getContext("2d"),k=b.G||window.devicePixelRatio||1,m=b.h||d,q=b.g||c;f.width=m*k;f.height=q*k;!b.J&&(f.width>16384||f.height>16384)&&(f.width>16384&&f.height>16384?f.width>f.height?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384):f.width>16384?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=
+16384));f.style.width=`${m}`;f.style.height=`${q}`;b.backgroundColor&&(g.fillStyle=b.backgroundColor,g.fillRect(0,0,f.width,f.height));g.drawImage(e,0,0,f.width,f.height);return f})}function ya(a,b={}){return t(function*(){return(yield xa(a,b)).toDataURL()})};const za=["gemini.google.com","corp.google.com","proxy.googlers.com"];function Y(){return document.body.querySelectorAll('[class*="animate"]').length>0}function Z(a){return t(function*(){try{return yield ya(a,{h:a.offsetWidth,g:a.offsetHeight})}catch(d){var b=a.offsetHeight;const c=document.createElement("canvas");c.width=a.offsetWidth;c.height=b;return c.toDataURL("image/png")}})}
+function Aa(){return t(function*(){const a=document.body.offsetWidth,b=document.body.offsetHeight,d=document.body.cloneNode(!0);d.querySelectorAll('[class*="animate"]').forEach(c=>{c.classList.remove(...Array.from(c.classList).filter(e=>e.startsWith("animate")))});d.style.width=`${a}px`;d.style.height=`${b}px`;return d})}
+function Ba(a){return t(function*(){let b=document.body;if(Y()){var d=yield Aa();b=d;document.body.appendChild(d)}d=yield Z(b);Y()&&document.body.removeChild(b);window.parent.postMessage({type:"SEND_SCREENSHOT",image:d,topOffset:document.documentElement.scrollTop},a.origin)})}function Ca(a){return t(function*(){const b={type:"SEND_SCREENSHOT_FOR_DATA_VISUALIZATION",image:yield Z(document.body),topOffset:0};window.parent.postMessage(b,a.origin)})}
+window.addEventListener("message",a=>t(function*(){if(za.some(d=>a.origin.includes(d))){var b=a.data;b&&(b.type==="MAKE_SCREENSHOT"&&(yield Ba(a)),b.type==="MAKE_SCREENSHOT_FOR_DATA_VISUALIZATION"&&(yield Ca(a)))}}));
+</script><script>(function() {
+  // Ensure this script is executed only once
+  if (window.firebaseAuthBridgeScriptLoaded) {
+    return;
+  }
+  window.firebaseAuthBridgeScriptLoaded = true;
+
+  let nextTokenPromiseId = 0;
+
+  // Stores { resolve, reject } for ongoing token requests
+  const pendingTokenPromises = {};
+
+  // Listen for messages from the Host Application
+  window.addEventListener('message', function(event) {
+
+    const messageData = event.data;
+
+  if (messageData && messageData.type === 'RESOLVE_NEW_FIREBASE_TOKEN') {
+      const { success, token, error, promiseId } = messageData ?? {};
+      if (pendingTokenPromises[promiseId]) {
+        if (success) {
+          pendingTokenPromises[promiseId].resolve(token);
+        } else {
+          pendingTokenPromises[promiseId].reject(new Error(error || 'Token refresh failed from host.'));
+        }
+        delete pendingTokenPromises[promiseId];
+      }
+    }
+  });
+
+  // Expose a function for the Generated App to request a new Firebase token
+  window.requestNewFirebaseToken = function() {
+    const currentPromiseId = nextTokenPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingTokenPromises[currentPromiseId] = { resolve, reject };
+    });
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'REQUEST_NEW_FIREBASE_TOKEN',
+        promiseId: currentPromiseId
+      }, '*');
+    } else {
+      pendingTokenPromises[currentPromiseId].reject(new Error('No parent window to request token from.'));
+      delete pendingTokenPromises[currentPromiseId];
+    }
+    return promise;
+  };
+})();</script><script>
+let realOriginalGetUserMedia = null;
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  realOriginalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+}
+
+(function() {
+  if (navigator.mediaDevices && navigator.mediaDevices.__proto__) {
+    try {
+      Object.defineProperty(navigator.mediaDevices.__proto__, 'getUserMedia', {
+        get: function() {
+          return undefined; // Or throw an error
+        },
+        configurable: false
+      });
+    } catch (error) {
+      console.error("Error defining prototype getter:", error);
+    }
+  }
+})();
+
+(function() {
+  const pendingMediaResolvers = {};
+  let nextMediaPromiseId = 0;
+
+  function requestMediaPermissions(constraints) {
+    const mediaPromiseId = nextMediaPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingMediaResolvers[mediaPromiseId] = (granted) => {
+        delete pendingMediaResolvers[mediaPromiseId];
+        resolve(granted);
+      };
+    });
+
+    window.parent.postMessage({
+      type: 'requestMediaPermission',
+      constraints: constraints,
+      promiseId: mediaPromiseId,
+    }, '*');
+
+    return promise;
+  }
+
+  let originalGetUserMedia = realOriginalGetUserMedia;
+
+  function interceptGetUserMedia() {
+    if (navigator.mediaDevices) {
+      Object.defineProperty(navigator.mediaDevices, 'getUserMedia', {
+        value: function(constraints) {
+          return requestMediaPermissions(constraints).then((granted) => {
+            if (granted) {
+              if (originalGetUserMedia) {
+                return originalGetUserMedia(constraints);
+              } else {
+                throw new Error("Original getUserMedia not available.");
+              }
+            } else {
+              throw new DOMException('Permission denied', 'NotAllowedError');
+            }
+          });
+        },
+        writable: false,
+        configurable: false
+      });
+    }
+  }
+
+  interceptGetUserMedia();
+
+  const observer = new MutationObserver(function(mutationsList, observer) {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'reconfigured' && mutation.name === 'getUserMedia' && mutation.object === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'attributes' && mutation.attributeName === 'getUserMedia' && mutation.target === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'childList' && mutation.addedNodes) {
+        mutation.addedNodes.forEach(node => {
+          if (node === navigator.mediaDevices) {
+            interceptGetUserMedia();
+          }
+        });
+      }
+    }
+  });
+
+  function interceptSpeechRecognition() {
+    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+      return;
+    }
+
+    const OriginalSpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    const SpeechRecognitionWrapper = function(...args) {
+      const recognizer = new OriginalSpeechRecognition(...args);
+      const originalStart = recognizer.start.bind(recognizer);
+
+      recognizer.start = function() {
+        requestMediaPermissions({ audio: true }).then(granted => {
+          if (granted) {
+            originalStart();
+          } else {
+            const errorEvent = new SpeechRecognitionErrorEvent('error');
+            errorEvent.error = 'not-allowed'; // This is the standard error for permission denial.
+            recognizer.dispatchEvent(errorEvent);
+          }
+        });
+      };
+
+      return recognizer;
+    };
+
+    SpeechRecognitionWrapper.prototype = OriginalSpeechRecognition.prototype;
+    SpeechRecognitionWrapper.prototype.constructor = SpeechRecognitionWrapper;
+
+    if (window.SpeechRecognition) {
+      window.SpeechRecognition = SpeechRecognitionWrapper;
+    }
+    if (window.webkitSpeechRecognition) {
+      window.webkitSpeechRecognition = SpeechRecognitionWrapper;
+    }
+  }
+
+  interceptSpeechRecognition();
+
+  window.addEventListener('message', function(event) {
+    if (event.data) {
+      if (event.data.type === 'resolveMediaPermission') {
+        const { promiseId, granted } = event.data;
+        if (pendingMediaResolvers[promiseId]) {
+          pendingMediaResolvers[promiseId](granted);
+        }
+      }
+    }
+  });
+
+})();</script><script>((function(modelInformation) {
+  const originalFetch = window.fetch;
+  // TODO: b/421908508 - Move these out of the script and match all generative AI model calls.
+  let googleLlmBaseApiUrls = [
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':streamGenerateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageEditModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageTransformModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.ttsModelName + ':generateContent',
+  ];
+  modelInformation.deprecatedTextModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+    );
+  });
+  modelInformation.deprecatedImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predict',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predictLongRunning',
+    );
+  });
+
+  const pendingFetchResolvers = {};
+  let nextPromiseId = 0;
+
+  function handleStringInput(input, optionsArgument) {
+    const actualUrl = input;
+    const fetchCallArgs = [actualUrl, optionsArgument];
+    const effectiveOptions = optionsArgument || {};
+    const bodyForApiKeyCheck = effectiveOptions.body;
+    const bodyForPostMessage = effectiveOptions.body;
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  function handleRequestInput(input, optionsArgument) {
+    const actualUrl = input.url;
+    const fetchCallArgs = [input, optionsArgument];
+    const effectiveOptions = { method: input.method, headers: new Headers(input.headers) };
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (optionsArgument) {
+      if (optionsArgument.method) effectiveOptions.method = optionsArgument.method;
+      if (optionsArgument.headers) effectiveOptions.headers = new Headers(optionsArgument.headers);
+      if ('body' in optionsArgument) {
+        bodyForApiKeyCheck = optionsArgument.body;
+        bodyForPostMessage = optionsArgument.body;
+      } else {
+        bodyForApiKeyCheck = undefined;
+        bodyForPostMessage = input.body;
+      }
+    } else {
+      bodyForApiKeyCheck = undefined;
+      bodyForPostMessage = input.body;
+    }
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  window.fetch = function(input, optionsArgument) {
+    let actualUrl;
+    let fetchCallArgs;
+    let effectiveOptions = {};
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (typeof input === 'string') {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleStringInput(input, optionsArgument));
+    } else if (input instanceof Request) {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleRequestInput(input, optionsArgument));
+    } else {
+      return originalFetch.apply(window, [input, optionsArgument]);
+    }
+
+    effectiveOptions.method = effectiveOptions.method || 'GET';
+    if (!effectiveOptions.headers) {
+      effectiveOptions.headers = new Headers();
+    }
+
+
+    if (typeof actualUrl === 'string' && googleLlmBaseApiUrls.some((url) => actualUrl.startsWith(url))) {
+      let apiKeyIsNull = true;
+
+      const regex = new RegExp("models/([^:]+)");
+      const modelNameMatch = actualUrl.match(regex);
+      const modelName = modelNameMatch ? modelNameMatch[1] : 'unspecified';
+
+
+      try {
+        const urlObject = new URL(actualUrl);  // Use URL object for robust parsing
+        const apiKeyParam = urlObject.searchParams.get('key');
+        if (apiKeyParam) {
+          apiKeyIsNull = false;
+        }
+      } catch (e) {
+        // Continue checks even if URL parsing fails
+      }
+
+      if (apiKeyIsNull && effectiveOptions.headers) {
+        const h = new Headers(effectiveOptions.headers);
+        const apiKeyHeaderValue = h.get('X-API-Key') || h.get('x-api-key');
+        if (apiKeyHeaderValue) {
+          apiKeyIsNull = false;
+          return originalFetch.apply(window, fetchCallArgs);
+        }
+      }
+
+      if (apiKeyIsNull && effectiveOptions.method && ['POST', 'PUT', 'PATCH'].includes(effectiveOptions.method.toUpperCase()) && typeof bodyForApiKeyCheck === 'string') {
+        try {
+          const bodyData = JSON.parse(bodyForApiKeyCheck);
+          if (bodyData && bodyData.apiKey) {
+            apiKeyIsNull = false;
+            return originalFetch.apply(window, fetchCallArgs);
+          }
+        } catch (e) {
+          // Ignore JSON parsing errors
+        }
+      }
+
+      if(apiKeyIsNull) {
+        const promiseId = nextPromiseId++;
+        const promise = new Promise((resolve) => {
+          pendingFetchResolvers[promiseId] = (resolvedResponse) => {
+            delete pendingFetchResolvers[promiseId];
+            resolve(resolvedResponse);
+          };
+        });
+
+        let serializedBodyForPostMessage;
+        if (typeof bodyForPostMessage === 'string' || bodyForPostMessage == null) {
+            serializedBodyForPostMessage = bodyForPostMessage;
+        } else if (bodyForPostMessage instanceof ReadableStream) {
+            serializedBodyForPostMessage = null;
+        } else {
+            try {
+                serializedBodyForPostMessage = JSON.stringify(bodyForPostMessage);
+            } catch (e) {
+                serializedBodyForPostMessage = null;
+            }
+        }
+
+        const messageOptions = {
+            method: effectiveOptions.method,
+            headers: Object.fromEntries(new Headers(effectiveOptions.headers).entries()),
+            body: serializedBodyForPostMessage
+        };
+
+        window.parent.postMessage({
+          type: 'requestFetch',
+          url: actualUrl,
+          modelName: modelName,
+          options: messageOptions,
+          promiseId: promiseId,
+        }, '*');
+
+        return promise;
+      }
+      return originalFetch.apply(window, fetchCallArgs);
+    }
+    return originalFetch.apply(window, fetchCallArgs);
+  };
+
+  window.addEventListener('message', function(event) {
+    if (event.data && event.data.type === 'resolveFetch') {
+      const { promiseId, response } = event.data;
+      if (pendingFetchResolvers[promiseId]) {
+        try {
+          const reconstructedResponse = new Response(response.body, {
+            status: response.status,
+            statusText: response.statusText,
+            headers: new Headers(response.headers),
+          });
+          pendingFetchResolvers[promiseId](reconstructedResponse);
+        } catch (error) {
+          pendingFetchResolvers[promiseId](new Response(null, { status: 500, statusText: "Interceptor Response Reconstruction Error" }));
+        }
+      }
+    }
+  });
+
+}))({"textModelName":"gemini-2.5-flash-preview-09-2025","imageModelName":"imagen-4.0-generate-001","imageEditModelName":"gemini-2.5-flash-image-preview","imageTransformModelName":"gemini-3-pro-image-preview-11-2025","videoModelName":"veo-2.0-generate-001","ttsModelName":"gemini-2.5-flash-preview-tts","deprecatedTextModelNames":["gemini-2.0-flash","gemini-2.5-flash-preview-04-17","gemini-2.5-flash-preview-05-20"],"deprecatedImageModelNames":["imagen-3.0-generate-001","imagen-3.0-generate-002"]})</script><script>(function() {
+  const originalConsoleLog = console.log;
+  const originalConsoleError = console.error;
+
+    /**
+   * Normalizes an error event or a promise rejection reason into a structured error object.
+   * @param {*} errorEventOrReason The error object or reason.
+   * @return {object} Structured error data { message, name, stack }.
+   */
+  function getErrorObject(errorEventOrReason) {
+    if (errorEventOrReason instanceof Error) {
+      return {
+        message: errorEventOrReason.message,
+        name: errorEventOrReason.name,
+        stack: errorEventOrReason.stack,
+      };
+    }
+    // Fallback for non-Error objects.
+    try {
+      return {
+        message: JSON.stringify(errorEventOrReason),
+        name: 'UnknownErrorType',
+        stack: null,
+      };
+    } catch (e) {
+      return {
+        message: String(errorEventOrReason),
+        name: 'UnknownErrorTypeNonStringifiable',
+        stack: null,
+      };
+    }
+  }
+
+  /**
+   * Converts an array of arguments (from log/error) into a single string.
+   * Handles Error objects specially to include their message and stack.
+   * @param {Array<*>} args - Arguments passed to console methods.
+   * @return {string} A string representation of the arguments.
+   */
+  function stringifyArgs(args) {
+    return args
+      .map((arg) => {
+        if (arg instanceof Error) {
+          const {message, stack} = arg;
+          return `Error: ${message}${stack ? ('\nStack: ' + stack) : ''}`;
+        }
+        if (typeof arg === 'object' && arg !== null) {
+          try {
+            return JSON.stringify(arg);
+          } catch (error) {
+            return '[Circular Object]';
+          }
+        } else {
+          return String(arg);
+        }
+      })
+      .join(' ');
+  }
+
+  console.log = function(...args) {
+    const logString = stringifyArgs(args);
+    window.parent.postMessage({ type: 'log', message: logString }, '*');
+    originalConsoleLog.apply(console, args);
+  };
+
+  console.error = function(...args) {
+    let errorData;
+    if (args.length > 0 && args[0] instanceof Error) {
+      const err = args[0];
+      // If the first arg is an Error, capture its details.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        ...getErrorObject(err),
+        rawArgsString: stringifyArgs(args.slice(1)),
+        timestamp: new Date().toISOString(),
+      };
+    } else {
+      // If not an Error object, treat all args as a general error message.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        message: stringifyArgs(args),
+        name: 'ConsoleLoggedError',
+        stack: null,
+        timestamp: new Date().toISOString(),
+      };
+    }
+    window.parent.postMessage(errorData, '*');
+    originalConsoleError.apply(console, args);
+  };
+
+  // Listen for global unhandled synchronous errors.
+  window.addEventListener('error', function(event) {
+    const errorDetails = event.error ? getErrorObject(event.error) : {
+      message: event.message,
+      name: 'GlobalError',
+      stack: null,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
+    };
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'global',
+      ...errorDetails,
+      message: errorDetails.message || event.message,
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+  // Listen for unhandled promise rejections (asynchronous errors).
+  window.addEventListener('unhandledrejection', function(event) {
+    const errorDetails = getErrorObject(event.reason);
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'unhandledrejection',
+      ...errorDetails,
+      message: errorDetails.message || 'Unhandled Promise Rejection',
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+})();</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>菲律宾BPO项目总控仪表盘</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            /* === V46 质感配色系统 (Luminous Material) === */
+            --bg-base: #F2F4F8;           
+            --bg-gradient: radial-gradient(circle at 50% 0%, #FFFFFF 0%, #F2F4F8 100%);
+            
+            --card-bg: #FFFFFF;
+            --card-border: 1px solid rgba(255, 255, 255, 0.6);
+            
+            /* 文字系统 */
+            --text-primary: #1D1D1F;      
+            --text-secondary: #636E72;    
+            --text-tertiary: #B2BEC3;     
+            
+            /* 品牌与功能色 */
+            --accent-blue: #0071e3;       
+            --accent-blue-gradient: linear-gradient(135deg, #0071e3, #005bb5);
+            
+            /* 模块识别色 */
+            --theme-order: #007AFF;
+            --theme-drawing: #FF9500;
+            --theme-delivery: #34C759;
+            --theme-ship: #6C5CE7;
+            --theme-ncr: #FF3B30;
+            --theme-finance: #AF52DE;     
+            
+            /* 阴影与深度 */
+            --shadow-card: 
+                0 4px 6px -1px rgba(0, 0, 0, 0.05), 
+                0 2px 4px -1px rgba(0, 0, 0, 0.03),
+                inset 0 1px 0 rgba(255,255,255, 0.6);
+            
+            --shadow-hover: 
+                0 20px 25px -5px rgba(0, 0, 0, 0.08), 
+                0 10px 10px -5px rgba(0, 0, 0, 0.03),
+                inset 0 1px 0 rgba(255,255,255, 0.8);
+
+            --shadow-input: inset 0 2px 4px 0 rgba(0, 0, 0, 0.04);
+            --shadow-float: 0 12px 32px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
+            
+            --radius-main: 16px;
+            --radius-btn: 8px;
+            
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        * { box-sizing: border-box; outline: none; -webkit-tap-highlight-color: transparent; }
+
+        body { 
+            font-family: var(--font-stack); 
+            background: var(--bg-base);
+            background-image: var(--bg-gradient);
+            background-attachment: fixed;
+            margin: 0; 
+            padding: 60px 40px 140px 40px; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            min-height: 100vh; 
+            color: var(--text-primary);
+            -webkit-font-smoothing: antialiased; 
+        }
+        
+        .hidden { display: none !important; }
+
+        /* 去除数字输入框的增减按钮 (Spinners) */
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+        }
+        input[type=number] {
+            -moz-appearance: textfield; /* Firefox */
+        }
+
+        /* 水印 */
+        .watermark {
+            position: fixed; font-size: 12px; font-weight: 700; color: rgba(0, 0, 0, 0.18); 
+            pointer-events: none; z-index: 9999; font-family: 'Consolas', monospace; 
+            text-transform: uppercase; letter-spacing: 1.5px;
+            text-shadow: 1px 1px 0 rgba(255,255,255,0.6);
+        }
+        .wm-top { top: 25px; right: 35px; }
+        .wm-bottom { bottom: 25px; right: 35px; }
+
+        /* 头部 */
+        .header { text-align: center; margin-bottom: 50px; width: 100%; position: relative; max-width: 1200px; animation: slideDown 0.6s ease-out; }
+        h1 { 
+            font-size: 34px; font-weight: 800; margin: 0; letter-spacing: -0.5px; color: var(--text-primary); 
+            background: linear-gradient(135deg, #2D3436 0%, #636E72 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        p { color: var(--text-secondary); font-size: 16px; margin-top: 10px; font-weight: 500; letter-spacing: 0.5px; opacity: 0.8; }
+        
+        /* 返回按钮 */
+        .btn-back { 
+            position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px);
+            color: var(--text-secondary); border: 1px solid rgba(255,255,255,0.8);
+            padding: 10px 20px; border-radius: 99px; cursor: pointer; font-size: 14px; font-weight: 600; 
+            transition: all 0.3s ease; display: flex; align-items: center; gap: 8px;
+            box-shadow: var(--shadow-card);
+        }
+        .btn-back:hover { background: #fff; transform: translateY(-50%) scale(1.05); color: var(--accent-blue); box-shadow: var(--shadow-hover); }
+
+        /* 仪表盘 Grid */
+        .dashboard-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; width: 100%; max-width: 1200px; }
+        
+        /* 模块卡片 */
+        .module-card { 
+            background: var(--card-bg); border-radius: var(--radius-main); 
+            box-shadow: var(--shadow-card); cursor: pointer; 
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+            display: flex; flex-direction: column; overflow: hidden; 
+            border: var(--card-border); position: relative;
+        }
+        .module-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
+        .module-card::after { 
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.4) 50%, transparent 70%);
+            transform: translateX(-100%); transition: transform 0.6s; pointer-events: none;
+        }
+        .module-card:hover::after { transform: translateX(100%); }
+
+        .card-stats { padding: 24px 28px 12px 28px; border-bottom: 1px solid #F0F2F5; background: #FAFBFC; }
+        .stats-label { font-size: 11px; color: var(--text-secondary); font-weight: 700; text-transform: uppercase; display: flex; justify-content: space-between; margin-bottom: 8px; letter-spacing: 0.8px; }
+        .stats-value { font-size: 24px; font-weight: 800; color: var(--text-primary); font-family: 'Consolas', sans-serif; }
+        
+        .progress-bar-bg { width: 100%; height: 6px; background: #E6E8EB; border-radius: 3px; margin-top: 12px; overflow: hidden; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05); }
+        .progress-bar-fill { height: 100%; border-radius: 3px; width: 0%; transition: width 1s ease-out; background-image: linear-gradient(90deg, rgba(255,255,255,0.2) 0%, transparent 100%); background-size: 200% 100%; }
+        
+        .fill-order { background-color: var(--theme-order); }
+        .fill-drawing { background-color: var(--theme-drawing); }
+        .fill-delivery { background-color: var(--theme-delivery); }
+        .fill-ncr { background-color: var(--theme-ncr); }
+        .fill-ship { background-color: var(--theme-ship); }
+        .fill-finance { background-color: var(--theme-finance); }
+
+        .card-content { padding: 32px 28px; display: flex; flex-direction: column; align-items: center; text-align: center; flex: 1; }
+        
+        .icon-container {
+            width: 60px; height: 60px; border-radius: 18px; 
+            display: flex; align-items: center; justify-content: center;
+            font-size: 28px; margin-bottom: 20px;
+            box-shadow: 0 8px 16px -4px rgba(0,0,0,0.1); 
+        }
+        .card-order .icon-container { background: linear-gradient(135deg, #74B9FF, #0984E3); color: white; }
+        .card-drawing .icon-container { background: linear-gradient(135deg, #FAB1A0, #E17055); color: white; }
+        .card-delivery .icon-container { background: linear-gradient(135deg, #55EFC4, #00B894); color: white; }
+        .card-ncr .icon-container { background: linear-gradient(135deg, #FF7675, #D63031); color: white; }
+        .card-ship .icon-container { background: linear-gradient(135deg, #A29BFE, #6C5CE7); color: white; }
+        .card-finance .icon-container { background: linear-gradient(135deg, #D6A2E8, #9B59B6); color: white; }
+
+        .card-title { font-size: 18px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; letter-spacing: -0.2px; }
+        .card-desc { color: var(--text-secondary); font-size: 13px; line-height: 1.6; font-weight: 500; }
+
+        /* 模块内部容器 */
+        .main-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; width: 100%; max-width: 1900px; animation: slideUp 0.5s ease-out; }
+        
+        .panel-box { 
+            background: var(--bg-card); padding: 30px; border-radius: var(--radius-main); 
+            box-shadow: var(--shadow-card); border: 1px solid rgba(255,255,255,0.8);
+        }
+        
+        .canvas-wrapper { flex: 0 0 auto; display: flex; justify-content: center; overflow-x: auto; align-items: flex-start; }
+        
+        /* Full Width Wrapper for Finance & NCR */
+        .canvas-wrapper.full-width-chart { flex: 1 1 100%; max-width: 1600px; min-width: 1000px; }
+
+        .data-panel { flex: 1 1 800px; min-width: 600px; max-height: 850px; overflow-y: auto; display: flex; flex-direction: column; scrollbar-width: thin; scrollbar-color: #DFE6E9 transparent; }
+        .data-panel::-webkit-scrollbar { width: 6px; }
+        .data-panel::-webkit-scrollbar-thumb { background-color: #DFE6E9; border-radius: 3px; }
+        .data-panel.full-width { flex: 1 1 100%; max-width: 1600px; min-width: 1000px; }
+
+        .chart-container { width: 100%; height: 100%; min-height: 400px; position: relative; }
+
+        /* [V46] NCR Treemap Styles */
+        .treemap-wrapper { 
+            width: 100%; height: 350px; 
+            display: flex; flex-wrap: wrap; 
+            border-radius: 12px; overflow: hidden;
+            background: #FAFAFA;
+        }
+        .treemap-item {
+            position: relative;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            color: #fff; font-weight: 700; text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border: 1px solid rgba(255,255,255,0.2); box-sizing: border-box;
+            cursor: default; overflow: hidden;
+        }
+        .treemap-item:hover { z-index: 2; transform: scale(1.02); box-shadow: 0 10px 20px rgba(0,0,0,0.15); border-color: rgba(255,255,255,0.8); }
+        .treemap-label { font-size: 14px; margin-bottom: 4px; text-align: center; padding: 0 10px; }
+        .treemap-value { font-size: 20px; font-family: 'Consolas', monospace; opacity: 0.9; }
+
+        /* Tabs & Controls */
+        .panel-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #F0F2F5; }
+        .tower-tabs { display: inline-flex; background: #F0F2F5; padding: 4px; border-radius: 12px; box-shadow: inset 0 1px 3px rgba(0,0,0,0.05); }
+        .tab-btn { padding: 8px 24px; cursor: pointer; font-weight: 500; color: var(--text-secondary); border: none; background: transparent; font-size: 13px; border-radius: 10px; transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1); }
+        .tab-btn:hover { color: var(--text-primary); background: rgba(255,255,255,0.5); }
+        .tab-btn.active { color: var(--accent-blue); background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.1); font-weight: 600; }
+
+        .btn-add-row { background: var(--theme-ncr); color: white; border: none; padding: 8px 20px; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 13px; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: all 0.2s; }
+        .btn-add-row:hover { filter: brightness(1.1); transform: translateY(-1px); }
+        .btn-add-row:active { transform: translateY(0); box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .btn-add-row.ship-btn { background: var(--theme-ship); }
+        .btn-add-row.finance-btn { background: var(--theme-finance); }
+
+        /* Table */
+        table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 13px; table-layout: fixed; }
+        th { position: sticky; top: 0; z-index: 10; background: #F8F9FA; color: var(--text-secondary); padding: 14px 10px; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid #E2E8F0; text-align: center; }
+        td { border-bottom: 1px solid #F0F2F5; padding: 10px; text-align: center; vertical-align: middle; color: var(--text-primary); background: white; transition: background 0.1s; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover td { background-color: #F8FAFC !important; }
+        td strong { font-weight: 700; color: var(--text-primary); font-family: 'Consolas', sans-serif; }
+
+        /* Row Styles */
+        .ncr-status-row td { background: #FAFAFA; border-bottom: 1px solid #E5E5EA; padding: 12px 20px; text-align: left; }
+        .ncr-status-row.resolved td { background: #F0FFF4; border-left: 4px solid var(--theme-delivery); }
+        .ncr-data-row.resolved textarea, .ncr-data-row.resolved input { opacity: 0.5; text-decoration: line-through; color: #A1A1A6; }
+        .finance-row.paid td { background: #F8F5FF; color: #A1A1A6; }
+        .finance-row.paid input, .finance-row.paid select { color: #A1A1A6; }
+
+        /* Inputs */
+        .cell-content { display: flex; align-items: center; justify-content: center; gap: 8px; }
+        input[type="checkbox"] { appearance: none; -webkit-appearance: none; width: 18px; height: 18px; border-radius: 6px; border: 2px solid #DFE6E9; cursor: pointer; transition: all 0.2s; background: #F8FAFC; }
+        input[type="checkbox"]:checked { background-color: var(--theme-delivery); border-color: var(--theme-delivery); }
+        input[type="checkbox"]:checked::after { content: '✓'; position: absolute; color: white; font-size: 12px; left: 3px; top: -1px; font-weight: 800; }
+
+        input.mini-input, input.date-input, textarea, select.mini-select { width: 100%; padding: 8px 12px; border: 1px solid transparent; background: transparent; border-radius: 8px; font-size: 13px; text-align: center; font-family: inherit; color: var(--text-primary); transition: all 0.2s; }
+        input.mini-input:hover, input.date-input:hover, textarea:hover, select.mini-select:hover { background: #F1F2F6; box-shadow: var(--shadow-input); }
+        input.mini-input:focus, input.date-input:focus, textarea:focus, select.mini-select:focus { background: #fff; border-color: var(--accent-blue); box-shadow: 0 0 0 3px rgba(116, 185, 255, 0.2); outline: none; }
+        textarea.auto-resize { resize: none; overflow: hidden; min-height: 36px; line-height: 1.5; text-align: left; }
+        
+        .delete-btn { color: var(--theme-ncr); opacity: 0.4; cursor: pointer; border: none; background: none; font-size: 16px; transition: 0.2s; }
+        .delete-btn:hover { opacity: 1; transform: scale(1.2); }
+        .add-detail-btn { color: var(--theme-ship); opacity: 0.7; cursor: pointer; border: none; background: none; font-size: 18px; font-weight: bold; transition: 0.2s; }
+        .add-detail-btn:hover { transform: scale(1.2); opacity: 1; }
+
+        .type-a-badge { color: #D35400; font-weight: 700; background: #FDEBD0; padding: 2px 8px; border-radius: 6px; font-size: 12px;}
+        .type-b-badge { color: #16A085; font-weight: 700; background: #D1F2EB; padding: 2px 8px; border-radius: 6px; font-size: 12px;}
+        .sep-line { border-left: 1px solid #DFE6E9; }
+        .readonly-text { color: var(--text-primary); font-weight: 600; font-family: 'Consolas', monospace; background: #F1F2F6; padding: 4px 8px; border-radius: 6px; display: inline-block; box-shadow: var(--shadow-input); }
+
+        /* Action Bar */
+        .action-bar { width: 100%; max-width: 1400px; margin-top: 40px; padding: 16px 30px; background: rgba(255,255,255,0.7); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-radius: 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: var(--shadow-float); position: sticky; bottom: 30px; z-index: 100; border: 1px solid rgba(255,255,255,0.6); transition: transform 0.3s ease; }
+        .btn-group-left { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+        .btn-row { display: flex; gap: 12px; align-items: center; }
+        .status-container { display: flex; flex-direction: column; gap: 2px; }
+        .file-status-text { font-size: 10px; color: var(--text-secondary); margin-left: 6px; font-weight: 500; }
+        .btn-group-right { display: flex; gap: 12px; align-items: center; }
+        button.action-btn { border: none; padding: 10px 24px; border-radius: 12px; font-weight: 600; cursor: pointer; transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1); font-size: 14px; display: flex; align-items: center; gap: 8px; }
+        .btn-save { background: var(--accent-blue-gradient); color: white; box-shadow: 0 4px 15px rgba(9, 132, 227, 0.4); }
+        .btn-save:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(9, 132, 227, 0.5); }
+        .btn-excel-export { background: #34c759; color: white; box-shadow: 0 4px 12px rgba(52, 199, 89, 0.2); }
+        .btn-excel-export:hover { background: #30b753; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(52, 199, 89, 0.3); }
+        .btn-excel-import { background: #FFFFFF; color: var(--text-primary); border: 1px solid rgba(0,0,0,0.1); box-shadow: var(--shadow-card); }
+        .btn-excel-import:hover { background: #F5F5F7; border-color: rgba(0,0,0,0.2); transform: translateY(-1px); }
+        #fileInput { display: none; }
+
+        /* Modal Styles */
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(45, 52, 54, 0.4); backdrop-filter: blur(8px); z-index: 1000; display: flex; justify-content: center; align-items: center; animation: fadeIn 0.3s ease; }
+        .modal-card { background: #fff; border-radius: 24px; padding: 40px; width: 480px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); transform: scale(1); animation: popIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); border: 1px solid rgba(255,255,255,0.8); }
+        .modal-title { font-size: 24px; font-weight: 800; margin-bottom: 12px; color: var(--text-primary); }
+        .modal-desc { font-size: 15px; color: var(--text-secondary); margin-bottom: 24px; line-height: 1.6; }
+        .modal-input { width: 100%; padding: 14px; margin-bottom: 16px; border: 2px solid #F0F2F5; border-radius: 12px; background: #F9F9FA; font-size: 15px; font-family: inherit; transition: 0.2s; }
+        .modal-input:focus { background: #fff; border-color: var(--accent-blue); box-shadow: 0 0 0 4px rgba(116, 185, 255, 0.2); outline: none; }
+        .modal-actions { display: flex; justify-content: flex-end; gap: 12px; margin-top: 16px; }
+        .btn-cancel { background: #F2F4F8; color: var(--text-secondary); padding: 12px 24px; border-radius: 12px; border: none; cursor: pointer; font-weight: 600; transition: 0.2s;}
+        .btn-cancel:hover { background: #DFE6E9; color: var(--text-primary); }
+        .btn-confirm { background: var(--accent-blue); color: white; padding: 12px 28px; border-radius: 12px; border: none; cursor: pointer; font-weight: 600; transition: 0.2s; box-shadow: 0 4px 12px rgba(9, 132, 227, 0.25);}
+        .btn-confirm:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(0, 113, 227, 0.35); }
+        .relay-info { font-size: 12px; color: var(--accent-blue); font-weight: 600; text-align: right; margin-right: 8px; display: flex; flex-direction: column; align-items: flex-end; opacity: 0.9; }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideDown { from { transform: translateY(-20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        @keyframes popIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+    </style>
+</head>
+<body>
+
+<div id="wm-top" class="watermark wm-top">DEREK YE/BPO  |  财务对账表  |  2025.12.15</div>
+<div id="wm-bottom" class="watermark wm-bottom">DEREK YE/BPO  |  财务对账表  |  2025.12.15</div>
+
+<!-- Save Relay Modal -->
+<div id="save-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+        <div class="modal-title">保存并接力 (Save &amp; Relay)</div>
+        <div class="modal-desc">为确保团队协作记录连贯，请在保存前登记您的姓名。</div>
+        <input type="text" id="relay-name" class="modal-input" placeholder="请输入您的姓名 (必填)">
+        <textarea id="relay-note" class="modal-input" placeholder="更新备注 (可选)" style="height: 90px; resize: none;"></textarea>
+        <div class="modal-actions">
+            <button class="btn-cancel" onclick="closeSaveModal()">取消</button>
+            <button class="btn-confirm" onclick="confirmSave()">确认保存</button>
+        </div>
+    </div>
+</div>
+
+<!-- 1. 主页 -->
+<div id="view-home" style="width: 100%; display: flex; flex-direction: column; align-items: center;" class="">
+    <div class="header">
+        <h1>菲律宾BPO项目总控仪表盘</h1>
+        <p>Unitized Curtain Wall Project | T4 &amp; T5 Towers</p>
+    </div>
+
+    <div class="dashboard-grid">
+        <!-- 模块卡片 -->
+        <div class="module-card card-order" onclick="enterModule('order')">
+            <div class="card-stats"><div class="stats-label">总下单完成率 <span id="stat-order-val">47%</span></div><div class="progress-bar-bg"><div id="stat-order-bar" class="progress-bar-fill fill-order" style="width: 46.6346%;"></div></div></div>
+            <div class="card-content"><div class="icon-container">📦</div><div class="card-title">下单进度统计表</div><div class="card-desc">全材料下单、到货与库存追踪<br>支持多维度同步管理</div></div>
+        </div>
+        <div class="module-card card-drawing" onclick="enterModule('drawing')">
+            <div class="card-stats"><div class="stats-label">加工图提交率 <span id="stat-drawing-val">31%</span></div><div class="progress-bar-bg"><div id="stat-drawing-bar" class="progress-bar-fill fill-drawing" style="width: 30.7692%;"></div></div></div>
+            <div class="card-content"><div class="icon-container">📐</div><div class="card-title">加工图提交记录表</div><div class="card-desc">加工图提图、修图、定版全流程<br>独立楼栋管理</div></div>
+        </div>
+        <div class="module-card card-delivery" onclick="enterModule('delivery')">
+            <div class="card-stats"><div class="stats-label">整体发货完成率 <span id="stat-delivery-val">2%</span></div><div class="progress-bar-bg"><div id="stat-delivery-bar" class="progress-bar-fill fill-delivery" style="width: 1.92308%;"></div></div></div>
+            <div class="card-content"><div class="icon-container">🚢</div><div class="card-title">交付计划表</div><div class="card-desc">ETD 排期、排产与发货管理<br>柜量与发货可视化</div></div>
+        </div>
+        <div class="module-card card-ship" onclick="enterModule('shipping')">
+            <div class="card-stats"><div class="stats-label">累计发货批次 <span id="stat-shipping-val">2</span></div><div class="progress-bar-bg"><div class="progress-bar-fill fill-ship" style="width: 100%"></div></div></div>
+            <div class="card-content"><div class="icon-container">⚓</div><div class="card-title">船期记录表</div><div class="card-desc">批次货柜明细、港口与船期<br>ETD/ETA 动态追踪</div></div>
+        </div>
+        <div class="module-card card-ncr" onclick="enterModule('ncr')">
+            <div class="card-stats"><div class="stats-label">累计报告总数 <span id="stat-ncr-val">9</span></div><div class="progress-bar-bg"><div class="progress-bar-fill fill-ncr" style="width: 100%"></div></div></div>
+            <div class="card-content"><div class="icon-container">⚠️</div><div class="card-title">质检投诉NCR合集</div><div class="card-desc">NCR 编号、详情与责任方追踪<br>文字记录与清单管理</div></div>
+        </div>
+        <div class="module-card card-finance" onclick="enterModule('finance')">
+            <div class="card-stats"><div class="stats-label">待处理账目数 <span id="stat-finance-val">2</span></div><div class="progress-bar-bg"><div class="progress-bar-fill fill-finance" style="width: 100%"></div></div></div>
+            <div class="card-content"><div class="icon-container">💰</div><div class="card-title">财务对账表</div><div class="card-desc">发票明细、产品单价自动核算<br>资金流向与余额管理</div></div>
+        </div>
+    </div>
+    <div style="margin-top: 60px; color: #a1a1a6; font-size: 12px; font-family: monospace;">SYSTEM V46.0 | DESIGNED BY DEREK YE</div>
+</div>
+
+<!-- 2. 通用模块界面 -->
+<div id="view-module" class="hidden" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+    <div class="header" style="margin-bottom: 30px;">
+        <button class="btn-back" onclick="goHome()"><span>❮</span> 仪表盘</button>
+        <h1 id="module-title">财务对账表</h1>
+        <p id="module-subtitle">Unitized Curtain Wall Project | T4 &amp; T5 Towers</p>
+    </div>
+
+    <div class="main-container">
+        <!-- Canvas / Chart Wrapper -->
+        <div id="wrapper-canvas" class="canvas-wrapper panel-box full-width-chart">
+            <canvas id="buildingCanvas" width="910" height="824" style="display: none; width: 910px; height: 824px;"></canvas>
+            <!-- Chart Container for Finance -->
+            <div id="financeChartContainer" class="chart-container" style="display: block; width: 100%; height: 500px;">
+                <canvas id="financeChart" width="1538" height="500" style="display: block; box-sizing: border-box; height: 500px; width: 1538px;"></canvas>
+            </div>
+            <!-- NCR Chart Container -->
+            <div id="ncrChartContainer" class="treemap-wrapper hidden" style="display: none;"><div class="treemap-item" style="flex-grow: 4; flex-basis: 44.4444%; background-color: rgb(231, 76, 60);"><div class="treemap-label">新福兴玻璃</div><div class="treemap-value">4 (44%)</div></div><div class="treemap-item" style="flex-grow: 2; flex-basis: 22.2222%; background-color: rgb(230, 126, 34);"><div class="treemap-label">南铝工程公司</div><div class="treemap-value">2 (22%)</div></div><div class="treemap-item" style="flex-grow: 1; flex-basis: 11.1111%; background-color: rgb(142, 68, 173);"><div class="treemap-label">新福兴玻璃有限公司</div><div class="treemap-value">1 (11%)</div></div><div class="treemap-item" style="flex-grow: 1; flex-basis: 11.1111%; background-color: rgb(41, 128, 185);"><div class="treemap-label">互利钢构</div><div class="treemap-value">1 (11%)</div></div><div class="treemap-item" style="flex-grow: 1; flex-basis: 11.1111%; background-color: rgb(22, 160, 133);"><div class="treemap-label">南平铝业</div><div class="treemap-value">1 (11%)</div></div></div>
+        </div>
+
+        <!-- Data Panel -->
+        <div id="wrapper-data" class="data-panel panel-box full-width">
+            <div class="panel-header">
+                <div id="tower-tabs" class="tower-tabs hidden">
+                    <button class="tab-btn active" onclick="switchTab('T4')">T4 塔楼</button>
+                    <button class="tab-btn" onclick="switchTab('T5')">T5 塔楼</button>
+                </div>
+                <!-- Controls Group -->
+                <div id="controls-area" class=""><button class="btn-add-row finance-btn"><span>+</span> 新增对账 (New)</button></div>
+            </div>
+            
+            <table id="dataTable">
+                <thead id="table-head"><tr><th style="width:100px">批次号</th><th style="width:100px">发票</th><th style="width:100px">日期</th><th style="width:80px">货柜</th><th style="width:100px">数量</th><th style="width:100px">产品</th><th style="width:80px">单价($)</th><th style="width:80px">小计($)</th><th style="width:100px">合计($)</th><th style="width:100px">调整</th><th style="width:100px">应收($)</th><th style="width:140px">状态</th><th style="width:80px">Del</th></tr></thead>
+                <tbody id="table-body"><tr class="finance-row"><td rowspan="5" style="background-color: rgb(255, 255, 255);"><input class="mini-input"></td><td rowspan="5" style="background-color: rgb(255, 255, 255);"><input class="mini-input"></td><td rowspan="5" style="background-color: rgb(255, 255, 255);"><input class="mini-input date-input"></td><td rowspan="5" style="background-color: rgb(255, 255, 255);"><input class="mini-input"></td><td><span style="color: red; cursor: pointer; margin-left: 4px;">×</span><input class="mini-input" type="number" style="text-align: center;"></td><td><select class="mini-input"><option value="FIN">FIN</option><option value="A类A1">A类A1</option><option value="A类A2-F">A类A2-F</option><option value="A类B1">A类B1</option><option value="A类B2-F">A类B2-F</option><option value="B类A2-0">B类A2-0</option><option value="B类B2-O">B类B2-O</option><option value="B类B2-D">B类B2-D</option><option value="B类A1">B类A1</option><option value="B类A2-F">B类A2-F</option><option value="B类B1">B类B1</option><option value="B类B2-F">B类B2-F</option><option value="Bracket">Bracket</option></select></td><td><span class="readonly-text">27.00</span></td><td><span id="cell-sub-0-0" class="readonly-text">904.23</span></td><td rowspan="5" style="background-color: rgb(255, 255, 255);"><strong id="cell-tot-0" style="color:#0071e3">88222.27</strong></td><td rowspan="5" style="background-color: rgb(255, 255, 255);"><span id="cell-adj-0" style="color:#ff9f0a">8822.23</span></td><td rowspan="5" style="background-color: rgb(255, 255, 255);"><strong id="cell-rev-0" style="color:#34c759">79400.04</strong></td><td rowspan="5" style="background-color: rgb(255, 255, 255);"><div style="display: flex; flex-direction: column; gap: 4px;"><input type="checkbox"><input class="mini-input date-input" placeholder="收款日期"></div></td><td rowspan="5" style="background-color: rgb(255, 255, 255);"><div style="display:flex;flex-direction:column;gap:5px;align-items:center;"><button class="add-detail-btn" onclick="addFinDetail(0)">＋</button><button class="delete-btn" onclick="delFinBatch(0)">🗑</button></div></td></tr><tr class="finance-row"><td><span style="color: red; cursor: pointer; margin-left: 4px;">×</span><input class="mini-input" type="number" style="text-align: center;"></td><td><select class="mini-input"><option value="FIN">FIN</option><option value="A类A1">A类A1</option><option value="A类A2-F">A类A2-F</option><option value="A类B1">A类B1</option><option value="A类B2-F">A类B2-F</option><option value="B类A2-0">B类A2-0</option><option value="B类B2-O">B类B2-O</option><option value="B类B2-D">B类B2-D</option><option value="B类A1">B类A1</option><option value="B类A2-F">B类A2-F</option><option value="B类B1">B类B1</option><option value="B类B2-F">B类B2-F</option><option value="Bracket">Bracket</option></select></td><td><span class="readonly-text">127.00</span></td><td><span id="cell-sub-0-1" class="readonly-text">2053.59</span></td></tr><tr class="finance-row"><td><span style="color: red; cursor: pointer; margin-left: 4px;">×</span><input class="mini-input" type="number" style="text-align: center;"></td><td><select class="mini-input"><option value="FIN">FIN</option><option value="A类A1">A类A1</option><option value="A类A2-F">A类A2-F</option><option value="A类B1">A类B1</option><option value="A类B2-F">A类B2-F</option><option value="B类A2-0">B类A2-0</option><option value="B类B2-O">B类B2-O</option><option value="B类B2-D">B类B2-D</option><option value="B类A1">B类A1</option><option value="B类A2-F">B类A2-F</option><option value="B类B1">B类B1</option><option value="B类B2-F">B类B2-F</option><option value="Bracket">Bracket</option></select></td><td><span class="readonly-text">144.00</span></td><td><span id="cell-sub-0-2" class="readonly-text">16639.20</span></td></tr><tr class="finance-row"><td><span style="color: red; cursor: pointer; margin-left: 4px;">×</span><input class="mini-input" type="number" style="text-align: center;"></td><td><select class="mini-input"><option value="FIN">FIN</option><option value="A类A1">A类A1</option><option value="A类A2-F">A类A2-F</option><option value="A类B1">A类B1</option><option value="A类B2-F">A类B2-F</option><option value="B类A2-0">B类A2-0</option><option value="B类B2-O">B类B2-O</option><option value="B类B2-D">B类B2-D</option><option value="B类A1">B类A1</option><option value="B类A2-F">B类A2-F</option><option value="B类B1">B类B1</option><option value="B类B2-F">B类B2-F</option><option value="Bracket">Bracket</option></select></td><td><span class="readonly-text">126.87</span></td><td><span id="cell-sub-0-3" class="readonly-text">65732.62</span></td></tr><tr class="finance-row"><td><span style="color: red; cursor: pointer; margin-left: 4px;">×</span><input class="mini-input" type="number" style="text-align: center;"></td><td><select class="mini-input"><option value="FIN">FIN</option><option value="A类A1">A类A1</option><option value="A类A2-F">A类A2-F</option><option value="A类B1">A类B1</option><option value="A类B2-F">A类B2-F</option><option value="B类A2-0">B类A2-0</option><option value="B类B2-O">B类B2-O</option><option value="B类B2-D">B类B2-D</option><option value="B类A1">B类A1</option><option value="B类A2-F">B类A2-F</option><option value="B类B1">B类B1</option><option value="B类B2-F">B类B2-F</option><option value="Bracket">Bracket</option></select></td><td><span class="readonly-text">126.87</span></td><td><span id="cell-sub-0-4" class="readonly-text">2892.64</span></td></tr><tr class="finance-row"><td rowspan="4" style="background-color: rgb(252, 252, 252);"><input class="mini-input"></td><td rowspan="4" style="background-color: rgb(252, 252, 252);"><input class="mini-input"></td><td rowspan="4" style="background-color: rgb(252, 252, 252);"><input class="mini-input date-input"></td><td rowspan="4" style="background-color: rgb(252, 252, 252);"><input class="mini-input"></td><td><span style="color: red; cursor: pointer; margin-left: 4px;">×</span><input class="mini-input" type="number" style="text-align: center;"></td><td><select class="mini-input"><option value="FIN">FIN</option><option value="A类A1">A类A1</option><option value="A类A2-F">A类A2-F</option><option value="A类B1">A类B1</option><option value="A类B2-F">A类B2-F</option><option value="B类A2-0">B类A2-0</option><option value="B类B2-O">B类B2-O</option><option value="B类B2-D">B类B2-D</option><option value="B类A1">B类A1</option><option value="B类A2-F">B类A2-F</option><option value="B类B1">B类B1</option><option value="B类B2-F">B类B2-F</option><option value="Bracket">Bracket</option></select></td><td><span class="readonly-text">27.00</span></td><td><span id="cell-sub-1-0" class="readonly-text">2124.36</span></td><td rowspan="4" style="background-color: rgb(252, 252, 252);"><strong id="cell-tot-1" style="color:#0071e3">29632.75</strong></td><td rowspan="4" style="background-color: rgb(252, 252, 252);"><span id="cell-adj-1" style="color:#ff9f0a">2963.27</span></td><td rowspan="4" style="background-color: rgb(252, 252, 252);"><strong id="cell-rev-1" style="color:#34c759">26669.47</strong></td><td rowspan="4" style="background-color: rgb(255, 255, 255);"><div style="display: flex; flex-direction: column; gap: 4px;"><input type="checkbox"><input class="mini-input date-input" placeholder="收款日期"></div></td><td rowspan="4" style="background-color: rgb(252, 252, 252);"><div style="display:flex;flex-direction:column;gap:5px;align-items:center;"><button class="add-detail-btn" onclick="addFinDetail(1)">＋</button><button class="delete-btn" onclick="delFinBatch(1)">🗑</button></div></td></tr><tr class="finance-row"><td><span style="color: red; cursor: pointer; margin-left: 4px;">×</span><input class="mini-input" type="number" style="text-align: center;"></td><td><select class="mini-input"><option value="FIN">FIN</option><option value="A类A1">A类A1</option><option value="A类A2-F">A类A2-F</option><option value="A类B1">A类B1</option><option value="A类B2-F">A类B2-F</option><option value="B类A2-0">B类A2-0</option><option value="B类B2-O">B类B2-O</option><option value="B类B2-D">B类B2-D</option><option value="B类A1">B类A1</option><option value="B类A2-F">B类A2-F</option><option value="B类B1">B类B1</option><option value="B类B2-F">B类B2-F</option><option value="Bracket">Bracket</option></select></td><td><span class="readonly-text">115.87</span></td><td><span id="cell-sub-1-1" class="readonly-text">15112.92</span></td></tr><tr class="finance-row"><td><span style="color: red; cursor: pointer; margin-left: 4px;">×</span><input class="mini-input" type="number" style="text-align: center;"></td><td><select class="mini-input"><option value="FIN">FIN</option><option value="A类A1">A类A1</option><option value="A类A2-F">A类A2-F</option><option value="A类B1">A类B1</option><option value="A类B2-F">A类B2-F</option><option value="B类A2-0">B类A2-0</option><option value="B类B2-O">B类B2-O</option><option value="B类B2-D">B类B2-D</option><option value="B类A1">B类A1</option><option value="B类A2-F">B类A2-F</option><option value="B类B1">B类B1</option><option value="B类B2-F">B类B2-F</option><option value="Bracket">Bracket</option></select></td><td><span class="readonly-text">132.87</span></td><td><span id="cell-sub-1-2" class="readonly-text">5933.97</span></td></tr><tr class="finance-row"><td><span style="color: red; cursor: pointer; margin-left: 4px;">×</span><input class="mini-input" type="number" style="text-align: center;"></td><td><select class="mini-input"><option value="FIN">FIN</option><option value="A类A1">A类A1</option><option value="A类A2-F">A类A2-F</option><option value="A类B1">A类B1</option><option value="A类B2-F">A类B2-F</option><option value="B类A2-0">B类A2-0</option><option value="B类B2-O">B类B2-O</option><option value="B类B2-D">B类B2-D</option><option value="B类A1">B类A1</option><option value="B类A2-F">B类A2-F</option><option value="B类B1">B类B1</option><option value="B类B2-F">B类B2-F</option><option value="Bracket">Bracket</option></select></td><td><span class="readonly-text">126.87</span></td><td><span id="cell-sub-1-3" class="readonly-text">6461.49</span></td></tr></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="action-bar">
+        <div class="btn-group-left">
+            <div class="btn-row">
+                <input type="file" id="fileInput" accept=".xlsx, .xls" onchange="handleFileImport(this)">
+                <button id="btn-import" class="btn-excel-import action-btn hidden" onclick="document.getElementById('fileInput').click()">📂 导入数据</button>
+                <button class="btn-excel-export action-btn" onclick="exportToExcel()">📊 导出Excel</button>
+            </div>
+            <div class="status-container">
+                <div id="import-status-text" class="file-status-text" style="color: var(--text-tertiary);">最近导入: 无记录</div>
+                <div id="export-status-text" class="file-status-text" style="color: var(--text-tertiary);">最近导出: 无记录</div>
+            </div>
+        </div>
+        <div class="btn-group-right">
+            <div id="relay-status" class="relay-info"><div>最后更新: <strong>Derek</strong></div><div style="color:var(--text-secondary);font-size:10px">2025/12/14 21:43:27</div></div>
+            <button class="btn-save action-btn" onclick="showSaveModal()">📥 保存到本地</button>
+        </div>
+    </div>
+</div>
+
+<script id="app-logic">
+    // ================= 0. Tools =================
+    function updateWatermark(viewName) {
+        const date = new Date();
+        const dateStr = `${date.getFullYear()}.${String(date.getMonth()+1).padStart(2,'0')}.${String(date.getDate()).padStart(2,'0')}`;
+        const text = `DEREK YE/BPO  |  ${viewName}  |  ${dateStr}`;
+        document.getElementById('wm-top').innerText = text;
+        document.getElementById('wm-bottom').innerText = text;
+    }
+    function autoResize(el) { el.style.height = 'auto'; el.style.height = (el.scrollHeight) + 'px'; }
+    function getBeijingTimeStr() {
+        const now = new Date(); const offset = 8; const utc = now.getTime() + (now.getTimezoneOffset() * 60000); const bj = new Date(utc + (3600000 * offset));
+        const y = bj.getFullYear(); const m = String(bj.getMonth() + 1).padStart(2, '0'); const d = String(bj.getDate()).padStart(2, '0');
+        const hh = String(bj.getHours()).padStart(2, '0'); const mm = String(bj.getMinutes()).padStart(2, '0');
+        return `${y}${m}${d}_${hh}${mm}`;
+    }
+    function updateFileStatusUI(mod) {
+        const modMeta = GLOBAL_DATA.meta[mod] || { lastImport: "", lastExport: "" };
+        const impMsg = modMeta.lastImport ? `最近导入: ${modMeta.lastImport}` : "最近导入: 无记录";
+        const expMsg = modMeta.lastExport ? `最近导出: ${modMeta.lastExport}` : "最近导出: 无记录";
+        document.getElementById('import-status-text').innerText = impMsg;
+        document.getElementById('export-status-text').innerText = expMsg;
+        document.getElementById('import-status-text').style.color = modMeta.lastImport ? 'var(--text-primary)' : 'var(--text-tertiary)';
+        document.getElementById('export-status-text').style.color = modMeta.lastExport ? 'var(--text-primary)' : 'var(--text-tertiary)';
+    }
+    function setModuleFileHistory(mod, type, fileName) {
+        if (!GLOBAL_DATA.meta[mod]) GLOBAL_DATA.meta[mod] = { lastImport: "", lastExport: "" };
+        if (type === 'import') GLOBAL_DATA.meta[mod].lastImport = fileName;
+        if (type === 'export') GLOBAL_DATA.meta[mod].lastExport = fileName;
+        updateFileStatusUI(mod);
+    }
+    function cleanDate(val) {
+        if (!val) return "";
+        if (typeof val === 'number') {
+            const date_info = new Date(Math.floor(val - 25569) * 86400 * 1000);
+            return `${date_info.getFullYear()}-${String(date_info.getMonth() + 1).padStart(2, '0')}-${String(date_info.getDate()).padStart(2, '0')}`;
+        }
+        return String(val).trim();
+    }
+    function renderRelayInfo() {
+        const el = document.getElementById('relay-status');
+        if (GLOBAL_DATA.meta && GLOBAL_DATA.meta.history && GLOBAL_DATA.meta.history.length > 0) {
+            const last = GLOBAL_DATA.meta.history[GLOBAL_DATA.meta.history.length - 1];
+            el.innerHTML = `<div>最后更新: <strong>${last.user}</strong></div><div style="color:var(--text-secondary);font-size:10px">${last.time}</div>`;
+        } else { el.innerHTML = `<div>暂无接力记录</div>`; }
+    }
+    // Added back missing function
+    function renderFileStatus() { if (CTX && CTX.module && GLOBAL_DATA.meta) updateFileStatusUI(CTX.module); }
+
+    // ================= 1. Configs =================
+    const COMMON_CFG = { floors: [], towers: ['T4', 'T5'] };
+    for (let i = 1; i <= 27; i++) { if (i !== 13) COMMON_CFG.floors.push(i); }
+
+    const CONFIG_ORDER = { id: 'order', title: '下单进度统计表', type: 'synced',
+        cols: [ { key: 'profile', name: '型材', color: '#0984E3' }, { key: 'glass', name: '玻璃', color: '#74B9FF' }, { key: 'gasket', name: '胶条', color: '#E17055' }, { key: 'fastener', name: '紧固件', color: '#6C5CE7' }, { key: 'panel', name: '铝板', color: '#D63031' }, { key: 'sealant', name: '硅酮胶', color: '#FDCB6E' }, { key: 'access', name: '辅料', color: '#00B894' }, { key: 'hardware', name: '五金', color: '#2D3436' } ]
+    };
+    const CONFIG_DRAWING = { id: 'drawing', title: '加工图提交记录表', type: 'separate' };
+    const CONFIG_DELIVERY = { id: 'delivery', title: '交付计划表', type: 'separate' };
+    const CONFIG_NCR = { id: 'ncr', title: '质检投诉NCR合集', type: 'list',
+        cols: ['报告日期', '缺陷编号 (NCR No.)', '材料类型', '缺陷详情描述（摘要）', '缺陷编号 Code', '数量 QTY', '责任方']
+    };
+    const CONFIG_SHIPPING = { id: 'shipping', title: '船期记录表', type: 'list',
+        cols: ['批次号', '货柜总量', '装柜时间', '出发港 (POL)', '计划开船 (ETD)', '计划到港 (ETA)', '实际开船 (ATD)', '实际到港 (ATA)', '数量', '尺寸', '装柜地点']
+    };
+    const CONFIG_FINANCE = { id: 'finance', title: '财务对账表', type: 'list',
+        cols: ['批次号', '发票编号', '登记日期', '货柜数量', '数量', '产品', '单价/USD', '小计/USD', '合计', '调整金额(10%)', '应收/USD', '状态', '收款状态']
+    };
+    
+    const PRODUCT_PRICES = {
+        "FIN": 27.00, "A类A1": 144.00, "A类A2-F": 127.00, "A类B1": 144.00, "A类B2-F": 138.00,
+        "B类A2-0": 126.87, "B类B2-O": 132.87, "B类B2-D": 132.87, "B类A1": 132.87, "B类A2-F": 115.87,
+        "B类B1": 132.87, "B类B2-F": 126.87, "Bracket": 4.5
+    };
+    const PRODUCT_OPTIONS = Object.keys(PRODUCT_PRICES);
+
+    const PRESET_PLAN_DATES = { 1: "2025-11-10", 8: "2025-12-05", 14: "2026-01-09", 26: "2026-04-16" };
+    function getPresetDelivery(floor) { if (floor <= 6) return { etd: "2025-12-01", a: 19, b: 7 }; if (floor <= 8) return { etd: "2026-01-01", a: 60, b: 96 }; return { etd: "2026-04-01", a: 60, b: 96 }; }
+    const PRESET_NCR = [ { date: '20251125', no: 'NP-BPO-003', mat: '8mm单玻', desc: '标签尺寸错误...', code: 'T4-GM...', qty: '共6件', party: '新福兴玻璃有限公司', solved: false } ];
+    const PRESET_SHIP = [ { batch: 'BPO-01', loadingDate: '2025-11-28', pol: '江阴', etd: '2025-11-30', atd: '2025-12-02', eta: '2025-12-05', ata: '2025-12-08', details: [{qty: 1, size: '40尺', factory: '罗源'}, {qty: 1, size: '20尺', factory: '江阴'}] } ];
+    const PRESET_FINANCE = [ { batchNo: 'BPO-01', invoice: 'INV-2025001', date: '2025-11-30', containerQty: 2, details: [ { qty: 100, product: 'A类A1' }, { qty: 200, product: 'Bracket' } ], solved: false, collection: { checked: false, date: '' } } ];
+
+    // ================= 2. Initialization =================
+    function initOrderData() { let data = {}; COMMON_CFG.floors.forEach(f => { data[f] = {}; CONFIG_ORDER.cols.forEach(c => data[f][c.key] = { c: false, t: "" }); }); return data; }
+    function initDrawingData() { let data = { T4: {}, T5: {} }; ['T4', 'T5'].forEach(t => { COMMON_CFG.floors.forEach(f => { data[t][f] = { plan: PRESET_PLAN_DATES[f] || "2026-01-01", subC: false, subD: "", apprC: false, apprD: "" }; }); }); return data; }
+    // [OPTIMIZED] Added volume: 0
+    function initDeliveryData() { let data = { T4: {}, T5: {} }; ['T4', 'T5'].forEach(t => { COMMON_CFG.floors.forEach(f => { const p = getPresetDelivery(f); data[t][f] = { etd: p.etd, typeA: p.a, typeB: p.b, total: p.a + p.b, prodC: false, shipD: "", shipC: false, realShipD: "", volume: 0 }; }); }); return data; }
+    function initNcrData() { return JSON.parse(JSON.stringify(PRESET_NCR)); }
+    function initShipData() { return JSON.parse(JSON.stringify(PRESET_SHIP)); } 
+    function initFinanceData() { return JSON.parse(JSON.stringify(PRESET_FINANCE)); }
+
+    // Placeholder for snapshot data, replaced on save
+    const savedSnapshot = {"order":{"1":{"profile":{"c":true,"t":""},"glass":{"c":true,"t":""},"gasket":{"c":true,"t":""},"fastener":{"c":true,"t":""},"panel":{"c":true,"t":""},"sealant":{"c":true,"t":""},"access":{"c":true,"t":""},"hardware":{"c":true,"t":""}},"2":{"profile":{"c":true,"t":""},"glass":{"c":true,"t":""},"gasket":{"c":true,"t":""},"fastener":{"c":true,"t":""},"panel":{"c":true,"t":""},"sealant":{"c":true,"t":""},"access":{"c":true,"t":""},"hardware":{"c":true,"t":""}},"3":{"profile":{"c":true,"t":""},"glass":{"c":true,"t":""},"gasket":{"c":true,"t":""},"fastener":{"c":true,"t":""},"panel":{"c":true,"t":""},"sealant":{"c":true,"t":""},"access":{"c":true,"t":""},"hardware":{"c":true,"t":""}},"4":{"profile":{"c":true,"t":""},"glass":{"c":true,"t":""},"gasket":{"c":true,"t":""},"fastener":{"c":true,"t":""},"panel":{"c":true,"t":""},"sealant":{"c":true,"t":""},"access":{"c":true,"t":""},"hardware":{"c":true,"t":""}},"5":{"profile":{"c":true,"t":""},"glass":{"c":true,"t":""},"gasket":{"c":true,"t":""},"fastener":{"c":true,"t":""},"panel":{"c":true,"t":""},"sealant":{"c":true,"t":""},"access":{"c":true,"t":""},"hardware":{"c":true,"t":""}},"6":{"profile":{"c":true,"t":""},"glass":{"c":true,"t":""},"gasket":{"c":true,"t":""},"fastener":{"c":true,"t":""},"panel":{"c":true,"t":""},"sealant":{"c":true,"t":""},"access":{"c":true,"t":""},"hardware":{"c":true,"t":""}},"7":{"profile":{"c":true,"t":""},"glass":{"c":true,"t":""},"gasket":{"c":true,"t":""},"fastener":{"c":true,"t":""},"panel":{"c":true,"t":""},"sealant":{"c":true,"t":""},"access":{"c":true,"t":""},"hardware":{"c":true,"t":""}},"8":{"profile":{"c":true,"t":""},"glass":{"c":true,"t":""},"gasket":{"c":true,"t":""},"fastener":{"c":true,"t":""},"panel":{"c":true,"t":""},"sealant":{"c":true,"t":""},"access":{"c":true,"t":""},"hardware":{"c":true,"t":""}},"9":{"profile":{"c":true,"t":""},"glass":{"c":true,"t":""},"gasket":{"c":true,"t":""},"fastener":{"c":true,"t":""},"panel":{"c":true,"t":""},"sealant":{"c":true,"t":""},"access":{"c":true,"t":""},"hardware":{"c":true,"t":""}},"10":{"profile":{"c":true,"t":""},"glass":{"c":true,"t":""},"gasket":{"c":true,"t":""},"fastener":{"c":true,"t":""},"panel":{"c":true,"t":""},"sealant":{"c":true,"t":""},"access":{"c":true,"t":""},"hardware":{"c":true,"t":""}},"11":{"profile":{"c":false,"t":""},"glass":{"c":false,"t":""},"gasket":{"c":true,"t":""},"fastener":{"c":true,"t":""},"panel":{"c":true,"t":""},"sealant":{"c":false,"t":""},"access":{"c":true,"t":""},"hardware":{"c":true,"t":""}},"12":{"profile":{"c":false,"t":""},"glass":{"c":false,"t":""},"gasket":{"c":true,"t":""},"fastener":{"c":true,"t":""},"panel":{"c":false,"t":""},"sealant":{"c":false,"t":""},"access":{"c":true,"t":""},"hardware":{"c":true,"t":""}},"14":{"profile":{"c":false,"t":""},"glass":{"c":false,"t":""},"gasket":{"c":true,"t":""},"fastener":{"c":true,"t":""},"panel":{"c":false,"t":""},"sealant":{"c":false,"t":""},"access":{"c":true,"t":""},"hardware":{"c":true,"t":""}},"15":{"profile":{"c":false,"t":""},"glass":{"c":false,"t":""},"gasket":{"c":true,"t":""},"fastener":{"c":true,"t":""},"panel":{"c":false,"t":""},"sealant":{"c":false,"t":""},"access":{"c":true,"t":""},"hardware":{"c":true,"t":""}},"16":{"profile":{"c":false,"t":""},"glass":{"c":false,"t":""},"gasket":{"c":false,"t":""},"fastener":{"c":false,"t":""},"panel":{"c":false,"t":""},"sealant":{"c":false,"t":""},"access":{"c":false,"t":""},"hardware":{"c":false,"t":""}},"17":{"profile":{"c":false,"t":""},"glass":{"c":false,"t":""},"gasket":{"c":false,"t":""},"fastener":{"c":false,"t":""},"panel":{"c":false,"t":""},"sealant":{"c":false,"t":""},"access":{"c":false,"t":""},"hardware":{"c":false,"t":""}},"18":{"profile":{"c":false,"t":""},"glass":{"c":false,"t":""},"gasket":{"c":false,"t":""},"fastener":{"c":false,"t":""},"panel":{"c":false,"t":""},"sealant":{"c":false,"t":""},"access":{"c":false,"t":""},"hardware":{"c":false,"t":""}},"19":{"profile":{"c":false,"t":""},"glass":{"c":false,"t":""},"gasket":{"c":false,"t":""},"fastener":{"c":false,"t":""},"panel":{"c":false,"t":""},"sealant":{"c":false,"t":""},"access":{"c":false,"t":""},"hardware":{"c":false,"t":""}},"20":{"profile":{"c":false,"t":""},"glass":{"c":false,"t":""},"gasket":{"c":false,"t":""},"fastener":{"c":false,"t":""},"panel":{"c":false,"t":""},"sealant":{"c":false,"t":""},"access":{"c":false,"t":""},"hardware":{"c":false,"t":""}},"21":{"profile":{"c":false,"t":""},"glass":{"c":false,"t":""},"gasket":{"c":false,"t":""},"fastener":{"c":false,"t":""},"panel":{"c":false,"t":""},"sealant":{"c":false,"t":""},"access":{"c":false,"t":""},"hardware":{"c":false,"t":""}},"22":{"profile":{"c":false,"t":""},"glass":{"c":false,"t":""},"gasket":{"c":false,"t":""},"fastener":{"c":false,"t":""},"panel":{"c":false,"t":""},"sealant":{"c":false,"t":""},"access":{"c":false,"t":""},"hardware":{"c":false,"t":""}},"23":{"profile":{"c":false,"t":""},"glass":{"c":false,"t":""},"gasket":{"c":false,"t":""},"fastener":{"c":false,"t":""},"panel":{"c":false,"t":""},"sealant":{"c":false,"t":""},"access":{"c":false,"t":""},"hardware":{"c":false,"t":""}},"24":{"profile":{"c":false,"t":""},"glass":{"c":false,"t":""},"gasket":{"c":false,"t":""},"fastener":{"c":false,"t":""},"panel":{"c":false,"t":""},"sealant":{"c":false,"t":""},"access":{"c":false,"t":""},"hardware":{"c":false,"t":""}},"25":{"profile":{"c":false,"t":""},"glass":{"c":false,"t":""},"gasket":{"c":false,"t":""},"fastener":{"c":false,"t":""},"panel":{"c":false,"t":""},"sealant":{"c":false,"t":""},"access":{"c":false,"t":""},"hardware":{"c":false,"t":""}},"26":{"profile":{"c":false,"t":""},"glass":{"c":false,"t":""},"gasket":{"c":false,"t":""},"fastener":{"c":false,"t":""},"panel":{"c":false,"t":""},"sealant":{"c":false,"t":""},"access":{"c":false,"t":""},"hardware":{"c":false,"t":""}},"27":{"profile":{"c":false,"t":""},"glass":{"c":false,"t":""},"gasket":{"c":false,"t":""},"fastener":{"c":false,"t":""},"panel":{"c":false,"t":""},"sealant":{"c":false,"t":""},"access":{"c":false,"t":""},"hardware":{"c":false,"t":""}}},"drawing":{"T4":{"1":{"plan":"2025-11-10","subC":true,"subD":"11/10/25","apprC":true,"apprD":"11/20/25"},"2":{"plan":"2025-11-10","subC":true,"subD":"11/10/25","apprC":true,"apprD":"11/20/25"},"3":{"plan":"2025-11-10","subC":true,"subD":"11/10/25","apprC":true,"apprD":"11/20/25"},"4":{"plan":"2025-11-10","subC":true,"subD":"11/17/25","apprC":true,"apprD":"11/24/25"},"5":{"plan":"2025-11-10","subC":true,"subD":"11/17/25","apprC":true,"apprD":"12/5/25"},"6":{"plan":"2025-11-10","subC":true,"subD":"11/17/25","apprC":true,"apprD":"11/24/25"},"7":{"plan":"2025-11-10","subC":true,"subD":"11/17/25","apprC":true,"apprD":"11/28/25"},"8":{"plan":"2025-12-05","subC":true,"subD":"12/12/25","apprC":false,"apprD":""},"9":{"plan":"2025-12-05","subC":false,"subD":"","apprC":false,"apprD":""},"10":{"plan":"2025-12-12","subC":false,"subD":"","apprC":false,"apprD":""},"11":{"plan":"2025-12-26","subC":false,"subD":"","apprC":false,"apprD":""},"12":{"plan":"2025-12-26","subC":false,"subD":"","apprC":false,"apprD":""},"14":{"plan":"2026-01-09","subC":false,"subD":"","apprC":false,"apprD":""},"15":{"plan":"2026-01-09","subC":false,"subD":"","apprC":false,"apprD":""},"16":{"plan":"2026-01-23","subC":false,"subD":"","apprC":false,"apprD":""},"17":{"plan":"2026-01-23","subC":false,"subD":"","apprC":false,"apprD":""},"18":{"plan":"2026-02-06","subC":false,"subD":"","apprC":false,"apprD":""},"19":{"plan":"2026-02-06","subC":false,"subD":"","apprC":false,"apprD":""},"20":{"plan":"2026-03-16","subC":false,"subD":"","apprC":false,"apprD":""},"21":{"plan":"2026-03-16","subC":false,"subD":"","apprC":false,"apprD":""},"22":{"plan":"2026-03-30","subC":false,"subD":"","apprC":false,"apprD":""},"23":{"plan":"2026-03-30","subC":false,"subD":"","apprC":false,"apprD":""},"24":{"plan":"2026-04-06","subC":false,"subD":"","apprC":false,"apprD":""},"25":{"plan":"2026-04-06","subC":false,"subD":"","apprC":false,"apprD":""},"26":{"plan":"2026-04-13","subC":false,"subD":"","apprC":false,"apprD":""},"27":{"plan":"2026-04-13","subC":false,"subD":"","apprC":false,"apprD":""}},"T5":{"1":{"plan":"11/16/25","subC":true,"subD":"11/16/25","apprC":true,"apprD":"11/28/25"},"2":{"plan":"11/16/25","subC":true,"subD":"11/16/25","apprC":true,"apprD":"11/28/25"},"3":{"plan":"11/16/25","subC":true,"subD":"12/2/25","apprC":true,"apprD":"12/4/25"},"4":{"plan":"2025-11-21","subC":true,"subD":"12/2/25","apprC":true,"apprD":"12/4/25"},"5":{"plan":"2025-11-21","subC":true,"subD":"12/2/25","apprC":true,"apprD":"12/4/25"},"6":{"plan":"2025-11-28","subC":true,"subD":"12/5/25","apprC":true,"apprD":""},"7":{"plan":"2025-11-28","subC":true,"subD":"12/5/25","apprC":true,"apprD":""},"8":{"plan":"2025-12-12","subC":true,"subD":"12/12/25","apprC":false,"apprD":""},"9":{"plan":"2025-12-26","subC":false,"subD":"","apprC":false,"apprD":""},"10":{"plan":"2025-12-26","subC":false,"subD":"","apprC":false,"apprD":""},"11":{"plan":"2026-01-09","subC":false,"subD":"","apprC":false,"apprD":""},"12":{"plan":"2026-01-09","subC":false,"subD":"","apprC":false,"apprD":""},"14":{"plan":"2026-01-23","subC":false,"subD":"","apprC":false,"apprD":""},"15":{"plan":"2026-01-23","subC":false,"subD":"","apprC":false,"apprD":""},"16":{"plan":"2026-02-06","subC":false,"subD":"","apprC":false,"apprD":""},"17":{"plan":"2026-02-06","subC":false,"subD":"","apprC":false,"apprD":""},"18":{"plan":"2026-02-20","subC":false,"subD":"","apprC":false,"apprD":""},"19":{"plan":"2026-02-20","subC":false,"subD":"","apprC":false,"apprD":""},"20":{"plan":"2026-03-06","subC":false,"subD":"","apprC":false,"apprD":""},"21":{"plan":"2026-03-06","subC":false,"subD":"","apprC":false,"apprD":""},"22":{"plan":"2026-03-20","subC":false,"subD":"","apprC":false,"apprD":""},"23":{"plan":"2026-03-20","subC":false,"subD":"","apprC":false,"apprD":""},"24":{"plan":"2026-03-27","subC":false,"subD":"","apprC":false,"apprD":""},"25":{"plan":"2026-03-27","subC":false,"subD":"","apprC":false,"apprD":""},"26":{"plan":"2026-04-03","subC":false,"subD":"","apprC":false,"apprD":""},"27":{"plan":"2026-04-03","subC":false,"subD":"","apprC":false,"apprD":""}}},"delivery":{"T4":{"1":{"etd":"12/1/25","typeA":19,"typeB":7,"total":26,"prodC":true,"shipD":"11/30/25","shipC":true,"realShipD":"12/4/25","volume":0},"2":{"etd":"12/1/25","typeA":19,"typeB":7,"total":26,"prodC":true,"shipD":"12/28/25","shipC":false,"realShipD":"","volume":0},"3":{"etd":"12/1/25","typeA":19,"typeB":7,"total":26,"prodC":true,"shipD":"12/28/25","shipC":false,"realShipD":"","volume":0},"4":{"etd":"12/1/25","typeA":19,"typeB":7,"total":26,"prodC":true,"shipD":"12/28/25","shipC":false,"realShipD":"","volume":0},"5":{"etd":"12/1/25","typeA":19,"typeB":7,"total":26,"prodC":true,"shipD":"12/28/25","shipC":false,"realShipD":"","volume":0},"6":{"etd":"12/1/25","typeA":19,"typeB":7,"total":26,"prodC":true,"shipD":"12/28/25","shipC":false,"realShipD":"","volume":0},"7":{"etd":"2026-01-01","typeA":60,"typeB":96,"total":156,"prodC":true,"shipD":"1/10/26","shipC":false,"realShipD":"","volume":0},"8":{"etd":"2026-01-01","typeA":60,"typeB":96,"total":156,"prodC":true,"shipD":"1/15/26","shipC":false,"realShipD":"","volume":0},"9":{"etd":"2026-01-17","typeA":37,"typeB":119,"total":156,"prodC":true,"shipD":"1/20/26","shipC":false,"realShipD":"","volume":0},"10":{"etd":"2026-01-17","typeA":60,"typeB":96,"total":156,"prodC":true,"shipD":"1/25/26","shipC":false,"realShipD":"","volume":0},"11":{"etd":"2026-02-19","typeA":60,"typeB":96,"total":156,"prodC":true,"shipD":"2/10/26","shipC":false,"realShipD":"","volume":0},"12":{"etd":"2026-02-19","typeA":60,"typeB":96,"total":156,"prodC":true,"shipD":"2/28/26","shipC":false,"realShipD":"","volume":0},"14":{"etd":"2026-03-24","typeA":60,"typeB":96,"total":156,"prodC":true,"shipD":"3/24/26","shipC":false,"realShipD":"","volume":0},"15":{"etd":"2026-03-24","typeA":37,"typeB":119,"total":156,"prodC":true,"shipD":"3/24/26","shipC":false,"realShipD":"","volume":0},"16":{"etd":"2026-04-25","typeA":60,"typeB":96,"total":156,"prodC":false,"shipD":"","shipC":false,"realShipD":"","volume":0},"17":{"etd":"2026-04-25","typeA":60,"typeB":96,"total":156,"prodC":false,"shipD":"","shipC":false,"realShipD":"","volume":0},"18":{"etd":"2026-05-28","typeA":60,"typeB":96,"total":156,"prodC":false,"shipD":"","shipC":false,"realShipD":"","volume":0},"19":{"etd":"2026-05-28","typeA":60,"typeB":96,"total":156,"prodC":false,"shipD":"","shipC":false,"realShipD":"","volume":0},"20":{"etd":"2026-06-29","typeA":37,"typeB":119,"total":156,"prodC":false,"shipD":"","shipC":false,"realShipD":"","volume":0},"21":{"etd":"2026-06-29","typeA":60,"typeB":96,"total":156,"prodC":false,"shipD":"","shipC":false,"realShipD":"","volume":0},"22":{"etd":"2026-08-01","typeA":60,"typeB":96,"total":156,"prodC":false,"shipD":"","shipC":false,"realShipD":"","volume":0},"23":{"etd":"2026-08-01","typeA":60,"typeB":96,"total":156,"prodC":false,"shipD":"","shipC":false,"realShipD":"","volume":0},"24":{"etd":"2026-08-08","typeA":30,"typeB":126,"total":156,"prodC":false,"shipD":"","shipC":false,"realShipD":"","volume":0},"25":{"etd":"2026-08-08","typeA":55,"typeB":101,"total":156,"prodC":false,"shipD":"","shipC":false,"realShipD":"","volume":0},"26":{"etd":"2026-08-15","typeA":55,"typeB":101,"total":156,"prodC":false,"shipD":"","shipC":false,"realShipD":"","volume":0},"27":{"etd":"2026-08-15","typeA":55,"typeB":101,"total":156,"prodC":false,"shipD":"","shipC":false,"realShipD":"","volume":0}},"T5":{"1":{"etd":"2026-01-05","typeA":19,"typeB":7,"total":26,"prodC":true,"shipD":"12/28/25","shipC":false,"realShipD":"","volume":0},"2":{"etd":"2026-01-05","typeA":19,"typeB":7,"total":26,"prodC":true,"shipD":"12/28/25","shipC":false,"realShipD":"","volume":0},"3":{"etd":"2026-01-14","typeA":19,"typeB":7,"total":26,"prodC":true,"shipD":"12/28/25","shipC":false,"realShipD":"","volume":0},"4":{"etd":"2026-01-14","typeA":19,"typeB":7,"total":26,"prodC":true,"shipD":"12/28/25","shipC":false,"realShipD":"","volume":0},"5":{"etd":"2026-01-21","typeA":19,"typeB":7,"total":26,"prodC":true,"shipD":"12/28/25","shipC":false,"realShipD":"","volume":0},"6":{"etd":"2026-01-21","typeA":55,"typeB":101,"total":156,"prodC":true,"shipD":"12/28/25","shipC":false,"realShipD":"","volume":0},"7":{"etd":"2026-01-28","typeA":55,"typeB":101,"total":156,"prodC":true,"shipD":"1/30/26","shipC":false,"realShipD":"","volume":0},"8":{"etd":"2026-01-28","typeA":55,"typeB":101,"total":156,"prodC":true,"shipD":"2/5/26","shipC":false,"realShipD":"","volume":0},"9":{"etd":"2026-03-01","typeA":28,"typeB":128,"total":156,"prodC":true,"shipD":"3/6/26","shipC":false,"realShipD":"","volume":0},"10":{"etd":"2026-03-01","typeA":55,"typeB":101,"total":156,"prodC":true,"shipD":"3/12/26","shipC":false,"realShipD":"","volume":0},"11":{"etd":"2026-04-03","typeA":55,"typeB":101,"total":156,"prodC":true,"shipD":"4/10/26","shipC":false,"realShipD":"","volume":0},"12":{"etd":"2026-04-03","typeA":55,"typeB":101,"total":156,"prodC":true,"shipD":"4/10/26","shipC":false,"realShipD":"","volume":0},"14":{"etd":"2026-05-06","typeA":55,"typeB":101,"total":156,"prodC":false,"shipD":"","shipC":false,"realShipD":"","volume":0},"15":{"etd":"2026-05-06","typeA":28,"typeB":128,"total":156,"prodC":false,"shipD":"","shipC":false,"realShipD":"","volume":0},"16":{"etd":"2026-06-07","typeA":55,"typeB":101,"total":156,"prodC":false,"shipD":"","shipC":false,"realShipD":"","volume":0},"17":{"etd":"2026-06-07","typeA":55,"typeB":101,"total":156,"prodC":false,"shipD":"","shipC":false,"realShipD":"","volume":0},"18":{"etd":"2026-07-10","typeA":55,"typeB":101,"total":156,"prodC":false,"shipD":"","shipC":false,"realShipD":"","volume":0},"19":{"etd":"2026-07-10","typeA":55,"typeB":101,"total":156,"prodC":false,"shipD":"","shipC":false,"realShipD":"","volume":0},"20":{"etd":"2026-08-12","typeA":30,"typeB":126,"total":156,"prodC":false,"shipD":"","shipC":false,"realShipD":"","volume":0},"21":{"etd":"2026-08-12","typeA":55,"typeB":101,"total":156,"prodC":false,"shipD":"","shipC":false,"realShipD":"","volume":0},"22":{"etd":"2026-09-13","typeA":55,"typeB":101,"total":156,"prodC":false,"shipD":"","shipC":false,"realShipD":"","volume":0},"23":{"etd":"2026-09-13","typeA":55,"typeB":101,"total":156,"prodC":false,"shipD":"","shipC":false,"realShipD":"","volume":0},"24":{"etd":"2026-09-20","typeA":30,"typeB":126,"total":156,"prodC":false,"shipD":"","shipC":false,"realShipD":"","volume":0},"25":{"etd":"2026-09-20","typeA":55,"typeB":101,"total":156,"prodC":false,"shipD":"","shipC":false,"realShipD":"","volume":0},"26":{"etd":"2026-09-27","typeA":55,"typeB":101,"total":156,"prodC":false,"shipD":"","shipC":false,"realShipD":"","volume":0},"27":{"etd":"2026-09-27","typeA":55,"typeB":101,"total":156,"prodC":false,"shipD":"","shipC":false,"realShipD":"","volume":0}}},"ncr":[{"date":"20251125","no":"NP-BPO-003","mat":"8mm单玻","desc":"标签尺寸错误（标签尺寸617*1368mm，实际玻璃尺寸617*1364mm）；Logo在安装时容易被清除掉。","code":"T4-GM-SE-002-G4=1, T4-GM-SE-002-G2=1, T4-GM-SE-003-G2=1, T4-GM-SE-003-G4=1, T4-GM-SE-003-G3=1, T4-3F-SE-003-G1=1","qty":"共6件","party":"新福兴玻璃有限公司","solved":false},{"date":"20251126","no":"NP-BPO-004","mat":"铝板","desc":"色差不符合样板（已退货返喷）；到货铝板未采取任何保护措施，导致板面刮伤严重。","code":"(未提供具体编号)","qty":"共96件","party":"互利钢构","solved":false},{"date":"20251128","no":"NP-BPO-005","mat":"玻璃","desc":"内部杂物，缺陷照片无法拍出。","code":"T4-2F-SE-007-G2 1614X1468=1, T4-2F-SE-012-G2 1614X1505=1, T4-GM-SE-005-G1 1262X1463=1, T4-5F-SE-007-G3 1414X1468=1, T4-4F-SE-003-G2 1862X1364=1, T4-4F-SE-006-G1 1262X1468=1","qty":"共6件","party":"新福兴玻璃","solved":false},{"date":"20251201","no":"NP-BPO-006","mat":"中空玻璃","desc":"玻璃内存杂物；边部破损。","code":"玻璃内存杂物: T4-4F-SE-006-G2 1862X1468=1；边部破损: T5-5F-SE-005-G4 1162X1468=1","qty":"共2件","party":"新福兴玻璃","solved":false},{"date":"20251202","no":"NP-BPO-007","mat":"中空玻璃","desc":"尺寸错误（图纸宽度1463mm，实际测量1446mm）。","code":"T4-2F-SE-005-G2 1614X1463=1","qty":"共1件","party":"新福兴玻璃","solved":false},{"date":"20251202","no":"NP-BPO-008","mat":"装饰线条组装/铝型材","desc":"型材直角边角度有偏差（例如QR102521-LWI-2667，图纸90°，测量91.4°），造成装饰线条与铝板不平整。","code":"型材编号: QR102521(LWI-2667), QR102522(LWI-2668)","qty":"数量待统计","party":"南平铝业","solved":false},{"date":"20251203","no":"NP-BPO-009","mat":"飞边玻璃","desc":"LOGO位置错误，室外面右下角反看，实际变成左上角。","code":"T4-2F-SE-001-G3 862X1383=1","qty":"1件","party":"新福兴玻璃","solved":false},{"date":"20251208","no":"NP-BPO-010","mat":"地台码","desc":"加工角度错误：尺寸541mm（图纸36℃，实测45℃）；尺寸459mm（图纸55℃，实测45℃）。","code":"涉及编号QR102549","qty":"尺寸541mm（各64件）；\r\n尺寸459mm（各64件）","party":"南铝工程公司","solved":false},{"date":"20251210","no":"NP-BPO-011","mat":"中空玻璃","desc":"玻璃已经合片注胶后，发现玻璃边部破损开裂。","code":"T4-5F-SE-002-G4 1162X1368=1","qty":"1件","party":"南铝工程公司","solved":false}],"shipping":[{"batch":"BPO-01","loadingDate":"2025-12-04","pol":"厦门","etd":"2025-12-07","atd":"2025-12-10","eta":"2025-12-10","ata":"2025-12-13","details":[{"qty":1,"size":"40尺","factory":"罗源"},{"qty":1,"size":"40尺","factory":"罗源/江阴"}]},{"batch":"BPO-","loadingDate":"2025-12-08","pol":"厦门","etd":"2025-12-10","atd":"2025-12-12","eta":"2025-12-13","ata":"2025-12-15","details":[{"qty":1,"size":"40尺","factory":"罗源"}]}],"finance":[{"batchNo":"BPO-01","invoice":"BPO-01","date":"2025-12-40","containerQty":2,"details":[{"qty":"33.49","product":"FIN"},{"qty":"16.17","product":"A类A2-F"},{"qty":"115.55","product":"A类B1"},{"qty":"518.11","product":"B类A2-0"},{"qty":"22.80","product":"B类B2-F"}],"solved":false,"collection":{"checked":false,"date":""}},{"batchNo":"BPO-02","invoice":"BPO-02","date":"2025-12-08","containerQty":"1","details":[{"qty":"78.68","product":"FIN"},{"qty":"130.43","product":"B类A2-F"},{"qty":"44.66","product":"B类B1"},{"qty":"50.93","product":"B类B2-F"}],"solved":false,"collection":{"checked":false,"date":""}}],"meta":{"history":[{"user":"derek","time":"2025/12/14 04:48:44","note":""},{"user":"Derek","time":"2025/12/14 04:50:53","note":"2025-12-14"},{"user":"Derek","time":"2025/12/14 21:43:27","note":""},{"user":"Derek","time":"2025/12/15 09:37:47","note":""}],"order":{"lastImport":"BPO_下单进度统计表_20251214_0047.xlsx","lastExport":""},"drawing":{"lastImport":"BPO加工图进度数据_20251213.xlsx","lastExport":""},"delivery":{"lastImport":"菲律宾BPO交付计划进度数据.xlsx","lastExport":""},"ncr":{"lastImport":"BPO质检投诉记录.xlsx","lastExport":""},"shipping":{"lastImport":"BPO_船期记录表_20251214_0449.xlsx","lastExport":""},"finance":{"lastImport":"","lastExport":""}}};
+    let GLOBAL_DATA = savedSnapshot || { order: initOrderData(), drawing: initDrawingData(), delivery: initDeliveryData(), ncr: initNcrData(), shipping: initShipData(), finance: initFinanceData(), meta: { history: [] } };
+    
+    // Safety & Migrations
+    if (!GLOBAL_DATA.delivery) GLOBAL_DATA.delivery = initDeliveryData();
+    // [OPTIMIZED] Ensure volume exists
+    ['T4', 'T5'].forEach(t => { COMMON_CFG.floors.forEach(f => { if(GLOBAL_DATA.delivery[t] && GLOBAL_DATA.delivery[t][f] && GLOBAL_DATA.delivery[t][f].volume === undefined) GLOBAL_DATA.delivery[t][f].volume = 0; }) });
+
+    if (!GLOBAL_DATA.ncr) GLOBAL_DATA.ncr = initNcrData();
+    if (!GLOBAL_DATA.shipping) GLOBAL_DATA.shipping = initShipData(); 
+    if (!GLOBAL_DATA.finance) GLOBAL_DATA.finance = initFinanceData();
+    if (GLOBAL_DATA.finance.length > 0 && !GLOBAL_DATA.finance[0].details) GLOBAL_DATA.finance = initFinanceData(); 
+    if (GLOBAL_DATA.shipping.length > 0) { GLOBAL_DATA.shipping.forEach(b => { if (b.factory !== undefined) { b.details.forEach(d => { if(!d.factory) d.factory = b.factory; }); delete b.factory; } if (b.loadingDate === undefined) b.loadingDate = ""; }); }
+    if (GLOBAL_DATA.finance.length > 0) { GLOBAL_DATA.finance.forEach(b => { if(!b.collection) b.collection = { checked: false, date: '' }; }); }
+    if (!GLOBAL_DATA.meta) GLOBAL_DATA.meta = { history: [], lastImport: "", lastExport: "" };
+    ['order', 'drawing', 'delivery', 'ncr', 'shipping', 'finance'].forEach(m => { if (!GLOBAL_DATA.meta[m]) GLOBAL_DATA.meta[m] = { lastImport: "", lastExport: "" }; });
+
+    // ================= 3. Dashboard Stats =================
+    function renderDashboardStats() {
+        let orderT=0, orderC=0; COMMON_CFG.floors.forEach(f=>{ CONFIG_ORDER.cols.forEach(c=>{ orderT++; if(GLOBAL_DATA.order[f][c.key].c) orderC++; }); });
+        document.getElementById('stat-order-val').innerText = (orderT ? Math.round(orderC/orderT*100) : 0) + '%';
+        document.getElementById('stat-order-bar').style.width = (orderT ? orderC/orderT*100 : 0) + '%';
+
+        let drawT=0, drawC=0; ['T4','T5'].forEach(t=>{ COMMON_CFG.floors.forEach(f=>{ drawT++; if(GLOBAL_DATA.drawing[t][f].subC) drawC++; }); });
+        document.getElementById('stat-drawing-val').innerText = (drawT ? Math.round(drawC/drawT*100) : 0) + '%';
+        document.getElementById('stat-drawing-bar').style.width = (drawT ? drawC/drawT*100 : 0) + '%';
+
+        let delT=0, delC=0; ['T4','T5'].forEach(t=>{ COMMON_CFG.floors.forEach(f=>{ delT++; if(GLOBAL_DATA.delivery[t][f].shipC) delC++; }); });
+        document.getElementById('stat-delivery-val').innerText = (delT ? Math.round(delC/delT*100) : 0) + '%';
+        document.getElementById('stat-delivery-bar').style.width = (delT ? delC/delT*100 : 0) + '%';
+
+        document.getElementById('stat-ncr-val').innerText = GLOBAL_DATA.ncr.length;
+        document.getElementById('stat-shipping-val').innerText = GLOBAL_DATA.shipping.length; 
+        const pendingFin = GLOBAL_DATA.finance.filter(f => !f.solved).length;
+        document.getElementById('stat-finance-val').innerText = pendingFin;
+    }
+
+    // ================= 4. Routing =================
+    let CTX = { module: 'order', activeTower: 'T4' };
+    let chartInstance = null; 
+
+    function enterModule(mod) {
+        CTX.module = mod;
+        document.getElementById('view-home').classList.add('hidden');
+        document.getElementById('view-module').classList.remove('hidden');
+        
+        let cfg, isListMode = (mod === 'ncr' || mod === 'shipping' || mod === 'finance');
+        if (mod === 'order') cfg = CONFIG_ORDER; else if (mod === 'drawing') cfg = CONFIG_DRAWING; else if (mod === 'delivery') cfg = CONFIG_DELIVERY; else if (mod === 'ncr') cfg = CONFIG_NCR; else if (mod === 'finance') cfg = CONFIG_FINANCE; else cfg = CONFIG_SHIPPING;
+
+        document.getElementById('module-title').innerText = cfg.title;
+        updateWatermark(cfg.title.toUpperCase()); 
+        
+        const canvasEl = document.getElementById('wrapper-canvas');
+        const dataEl = document.getElementById('wrapper-data');
+        const tabEl = document.getElementById('tower-tabs');
+        const controlsArea = document.getElementById('controls-area');
+        const btnImport = document.getElementById('btn-import');
+        if (mod === 'finance') btnImport.classList.add('hidden'); else btnImport.classList.remove('hidden');
+
+        controlsArea.innerHTML = ''; controlsArea.className = 'hidden';
+
+        const buildCanvas = document.getElementById('buildingCanvas');
+        const finChartContainer = document.getElementById('financeChartContainer');
+        const ncrChartContainer = document.getElementById('ncrChartContainer');
+        
+        buildCanvas.style.display = 'none';
+        finChartContainer.style.display = 'none';
+        ncrChartContainer.style.display = 'none';
+        finChartContainer.classList.add('hidden');
+        ncrChartContainer.classList.add('hidden');
+
+        // Chart & Canvas Visibility Logic
+        if (mod === 'finance') {
+            finChartContainer.style.display = 'block';
+            finChartContainer.classList.remove('hidden');
+            renderFinanceChart();
+        } else if (mod === 'ncr') {
+            ncrChartContainer.style.display = 'flex'; // Flexbox for treemap
+            ncrChartContainer.classList.remove('hidden');
+            renderNcrChart();
+        } else if (!isListMode) {
+            buildCanvas.style.display = 'block';
+        }
+
+        if (isListMode) {
+            if (mod === 'finance' || mod === 'ncr') { 
+                canvasEl.classList.remove('hidden'); 
+                canvasEl.classList.add('full-width-chart'); 
+            } else { 
+                canvasEl.classList.add('hidden'); 
+                canvasEl.classList.remove('full-width-chart');
+            }
+            
+            dataEl.classList.add('full-width');
+            tabEl.classList.add('hidden');
+            controlsArea.className = '';
+            
+            const btn = document.createElement('button');
+            if(mod==='shipping') btn.className = 'btn-add-row ship-btn';
+            else if(mod==='finance') btn.className = 'btn-add-row finance-btn';
+            else btn.className = 'btn-add-row';
+            
+            let btnText = "新增记录";
+            if(mod==='ncr') btnText = "新增报告 (New)";
+            if(mod==='shipping') btnText = "新增批次 (Batch)";
+            if(mod==='finance') btnText = "新增对账 (New)";
+            
+            btn.onclick = (mod === 'ncr') ? addNcrRow : (mod === 'finance' ? addFinanceBatch : addShippingBatch);
+            btn.innerHTML = `<span>+</span> ${btnText}`;
+            controlsArea.appendChild(btn);
+            initTable(); 
+        } else {
+            canvasEl.classList.remove('hidden'); canvasEl.classList.remove('full-width-chart');
+            dataEl.classList.remove('full-width');
+            if (mod !== 'order') { tabEl.classList.remove('hidden'); switchTab('T4'); } 
+            else { tabEl.classList.add('hidden'); initTable(); resizeCanvas(); }
+        }
+        
+        updateFileStatusUI(mod);
+        renderRelayInfo(); 
+    }
+
+    function goHome() { document.getElementById('view-module').classList.add('hidden'); document.getElementById('view-home').classList.remove('hidden'); updateWatermark("DASHBOARD HOME"); renderDashboardStats(); }
+    function switchTab(tower) { CTX.activeTower = tower; document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.innerText.includes(tower))); initTable(); resizeCanvas(); }
+
+    // ================= 5. Render Logic =================
+    function initTable() {
+        const h = document.getElementById('table-head'); const b = document.getElementById('table-body');
+        if (CTX.module === 'order') renderOrderTable(h, b); else if (CTX.module === 'drawing') renderDrawingTable(h, b); else if (CTX.module === 'delivery') renderDeliveryTable(h, b); else if (CTX.module === 'ncr') renderNcrTable(h, b); else if (CTX.module === 'finance') renderFinanceTable(h, b); else renderShippingTable(h, b);
+    }
+    
+    function renderOrderTable(h, b) { h.innerHTML=`<tr><th style="width:50px">F</th>${CONFIG_ORDER.cols.map(c=>`<th>${c.name}</th>`).join('')}</tr>`; b.innerHTML=''; [...COMMON_CFG.floors].reverse().forEach(f=>{ const tr=document.createElement('tr'); tr.innerHTML=`<td><strong>${f}F</strong></td>`; CONFIG_ORDER.cols.forEach(c=>{ const i=GLOBAL_DATA.order[f][c.key]; const td=document.createElement('td'); const chk=document.createElement('input'); chk.type='checkbox'; chk.checked=i.c; chk.onchange=function(){i.c=this.checked;drawAll();}; const inp=document.createElement('input'); inp.className='mini-input'; inp.value=i.t||""; inp.oninput=function(){i.t=this.value;}; const d=document.createElement('div'); d.className='cell-content'; d.append(chk,inp); td.appendChild(d); tr.appendChild(td); }); b.appendChild(tr); }); }
+    function renderDrawingTable(h, b) { h.innerHTML=`<tr><th style="width:60px">楼层</th><th style="width:130px">计划提交</th><th style="width:200px">提交状态 & 日期</th><th style="width:200px">批复状态 & 日期</th></tr>`; b.innerHTML=''; [...COMMON_CFG.floors].reverse().forEach(f=>{ const i=GLOBAL_DATA.drawing[CTX.activeTower][f]; const tr=document.createElement('tr'); tr.innerHTML=`<td><strong>${f}F</strong></td><td><span class="readonly-text">${i.plan||'-'}</span></td>`; const tdS=document.createElement('td'), dS=document.createElement('div'); dS.className='cell-content'; const cS=document.createElement('input'); cS.type='checkbox'; cS.checked=i.subC; cS.onchange=function(){i.subC=this.checked;drawAll();}; const iS=document.createElement('input'); iS.className='mini-input date-input'; iS.value=i.subD; iS.oninput=function(){i.subD=this.value;drawAll();}; dS.append(cS,iS); tdS.appendChild(dS); const tdA=document.createElement('td'), dA=document.createElement('div'); dA.className='cell-content'; const cA=document.createElement('input'); cA.type='checkbox'; cA.checked=i.apprC; cA.onchange=function(){i.apprC=this.checked;drawAll();}; const iA=document.createElement('input'); iA.className='mini-input date-input'; iA.value=i.apprD; iA.oninput=function(){i.apprD=this.value;drawAll();}; dA.append(cA,iA); tdA.appendChild(dA); tr.append(tdS,tdA); b.appendChild(tr); }); }
+    
+    // [OPTIMIZED] Render Delivery Table with Volume column
+    function renderDeliveryTable(h, b) { 
+        h.innerHTML=`<tr><th style="width:50px">F</th><th>总数</th><th style="color:var(--prod-a)">A</th><th style="color:var(--prod-b)">B</th><th style="width:80px">柜量</th><th>ETD</th><th class="sep-line">排产</th><th>计划发货</th><th class="sep-line">发货</th><th>发货日期</th></tr>`; 
+        b.innerHTML=''; 
+        [...COMMON_CFG.floors].reverse().forEach(f=>{ 
+            const i=GLOBAL_DATA.delivery[CTX.activeTower][f]; 
+            const tr=document.createElement('tr'); 
+            tr.innerHTML=`<td><strong>${f}F</strong></td><td>${i.total}</td><td>${i.typeA}</td><td>${i.typeB}</td>`;
+            
+            // Volume input (Numeric format, no spinner, robust value display)
+            const tdV = document.createElement('td');
+            const iV = document.createElement('input');
+            iV.className = 'mini-input';
+            iV.type = 'number';
+            // Logic ensure '0' is displayed, only undefined/null shows empty
+            iV.value = (i.volume !== undefined && i.volume !== null) ? i.volume : "";
+            iV.placeholder = "-";
+            iV.style.textAlign = "center";
+            iV.oninput = function() { i.volume = parseInt(this.value)||0; drawAll(); };
+            tdV.appendChild(iV);
+            tr.appendChild(tdV);
+
+            const tdETD = document.createElement('td');
+            tdETD.innerHTML = `<span class="readonly-text">${i.etd||'-'}</span>`;
+            tr.appendChild(tdETD);
+
+            const tdP=document.createElement('td'); tdP.className='sep-line'; const cP=document.createElement('input'); cP.type='checkbox'; cP.checked=i.prodC; cP.onchange=function(){i.prodC=this.checked;drawAll();}; tdP.appendChild(cP); tr.appendChild(tdP); const tdS=document.createElement('td'); const iS=document.createElement('input'); iS.className='mini-input date-input'; iS.value=i.shipD; iS.oninput=function(){i.shipD=this.value;drawAll();}; tdS.appendChild(iS); tr.appendChild(tdS); const tdR=document.createElement('td'); tdR.className='sep-line'; const cR=document.createElement('input'); cR.type='checkbox'; cR.checked=i.shipC; cR.onchange=function(){i.shipC=this.checked;drawAll();}; tdR.appendChild(cR); tr.appendChild(tdR); const tdD=document.createElement('td'); const iD=document.createElement('input'); iD.className='mini-input date-input'; iD.value=i.realShipD||""; iD.oninput=function(){i.realShipD=this.value;drawAll();}; tdD.appendChild(iD); tr.appendChild(tdD); b.appendChild(tr); 
+        }); 
+    }
+
+    function renderShippingTable(h, b) { h.innerHTML = `<tr><th style="width:120px;">批次号</th><th style="width:80px;">货柜总量</th><th style="width:120px;">装柜时间</th><th style="width:100px;">出发港 (POL)</th><th style="width:120px;">计划开船 (ETD)</th><th style="width:120px;">计划到港 (ETA)</th><th style="width:120px;">实际开船 (ATD)</th><th style="width:120px;">实际到港 (ATA)</th><th style="width:60px;">数量</th><th style="width:80px;">尺寸</th><th style="width:120px;">装柜地点</th><th style="width:50px;"></th><th style="width:50px;">Del</th></tr>`; b.innerHTML=''; GLOBAL_DATA.shipping.forEach((bt,bi)=>{const rc=bt.details.length;const tq=bt.details.reduce((s,d)=>s+(parseInt(d.qty)||0),0);bt.details.forEach((d,di)=>{const tr=document.createElement('tr');if(di===0){const cm=(k,dt=false,tx=false)=>{const td=document.createElement('td');td.rowSpan=rc;td.style.backgroundColor=(bi%2===0)?'#fff':'#fcfcfc';if(tx){td.innerText=k}else{const ip=document.createElement('input');ip.className=dt?'mini-input date-input':'mini-input';ip.value=bt[k]||"";if(k==='atd'&&bt.atd)ip.style.color='#0071e3';if(k==='ata'&&bt.ata)ip.style.color='#34c759';ip.oninput=function(){bt[k]=this.value};td.appendChild(ip)}return td};tr.append(cm('batch'),cm(tq,false,true),cm('loadingDate',true),cm('pol'),cm('etd',true),cm('eta',true),cm('atd',true),cm('ata',true));}const tQ=document.createElement('td');const iQ=document.createElement('input');iQ.type='number';iQ.className='mini-input';iQ.value=d.qty;iQ.oninput=function(){d.qty=parseInt(this.value);renderShippingTable(h,b)};tQ.appendChild(iQ);tr.appendChild(tQ);const tS=document.createElement('td');const sS=document.createElement('select');sS.className='mini-input';['40尺','20尺'].forEach(o=>{const op=document.createElement('option');op.value=o;op.innerText=o;if(d.size===o)op.selected=true;sS.appendChild(op)});sS.onchange=function(){d.size=this.value};tS.appendChild(sS);tr.appendChild(tS);const tF=document.createElement('td');const iF=document.createElement('input');iF.className='mini-input';iF.value=d.factory||"";iF.oninput=function(){d.factory=this.value};tF.appendChild(iF);tr.appendChild(tF);const tA=document.createElement('td');if(di===0){const bA=document.createElement('button');bA.className='add-detail-btn';bA.innerText='＋';bA.onclick=()=>{bt.details.push({qty:1,size:'20尺',factory:''});renderShippingTable(h,b)};tA.appendChild(bA)}const bD=document.createElement('button');bD.className='delete-btn';bD.innerText='×';bD.style.fontSize='14px';bD.onclick=()=>{if(bt.details.length===1){if(confirm("Del?")){GLOBAL_DATA.shipping.splice(bi,1)}}else{bt.details.splice(di,1)}renderShippingTable(h,b)};tA.appendChild(bD);tr.appendChild(tA);if(di===0){const tDB=document.createElement('td');tDB.rowSpan=rc;tDB.style.backgroundColor=(bi%2===0)?'#fff':'#fcfcfc';const bDB=document.createElement('button');bDB.className='delete-btn';bDB.innerText='🗑';bDB.onclick=()=>{if(confirm("Del Batch?")){GLOBAL_DATA.shipping.splice(bi,1);renderShippingTable(h,b)}};tDB.appendChild(bDB);tr.appendChild(tDB)}b.appendChild(tr)})}) }
+    function addShippingBatch() { GLOBAL_DATA.shipping.push({ batch: 'BPO-', loadingDate: '', pol: '', etd: '', atd: '', eta: '', ata: '', details: [{qty:1, size:'40尺', factory:''}] }); renderShippingTable(document.getElementById('table-head'), document.getElementById('table-body')); }
+    
+    // [OPTIMIZED] Finance Table with Separate Calc Update
+    function renderFinanceTable(h, b) {
+        h.innerHTML = `<tr><th style="width:100px">批次号</th><th style="width:100px">发票</th><th style="width:100px">日期</th><th style="width:80px">货柜</th><th style="width:100px">数量</th><th style="width:100px">产品</th><th style="width:80px">单价($)</th><th style="width:80px">小计($)</th><th style="width:100px">合计($)</th><th style="width:100px">调整</th><th style="width:100px">应收($)</th><th style="width:140px">状态</th><th style="width:80px">Del</th></tr>`;
+        b.innerHTML = '';
+        
+        GLOBAL_DATA.finance.forEach((bt, bi) => {
+            const rc = bt.details.length;
+            
+            // Calculate initial totals for rendering
+            let tot = 0;
+            bt.details.forEach(d => {
+                const p = PRODUCT_PRICES[d.product] || 0;
+                tot += (parseFloat(d.qty) || 0) * p;
+            });
+            const adj = tot * 0.1;
+            const rev = tot - adj;
+
+            bt.details.forEach((d, di) => {
+                const tr = document.createElement('tr');
+                tr.className = 'finance-row' + (bt.collection.checked ? ' paid' : '');
+
+                // 1. Batch Level Cells (RowSpan)
+                if (di === 0) {
+                    const cm = (k, dt = false, v = null, tx = false) => {
+                        const td = document.createElement('td');
+                        td.rowSpan = rc;
+                        td.style.backgroundColor = (bi % 2 === 0) ? '#fff' : '#fcfcfc';
+                        if (tx) {
+                            td.innerHTML = `<span style="font-weight:bold;color:${k === 'rev' ? '#34c759' : '#1d1d1f'}">${v}</span>`;
+                        } else {
+                            const ip = document.createElement('input');
+                            ip.className = dt ? 'mini-input date-input' : 'mini-input';
+                            ip.value = bt[k] || "";
+                            ip.oninput = () => {
+                                bt[k] = ip.value;
+                                renderFinanceChart();
+                            };
+                            td.appendChild(ip);
+                        }
+                        return td;
+                    };
+                    tr.append(cm('batchNo'), cm('invoice'), cm('date', true), cm('containerQty'));
+                }
+
+                // 2. Detail Level Cells
+                // Qty Input [OPTIMIZED]
+                const tQ = document.createElement('td');
+                const iQ = document.createElement('input');
+                iQ.className = 'mini-input';
+                iQ.type = 'number'; // Numeric
+                iQ.value = d.qty;
+                iQ.style.textAlign = 'center';
+                iQ.oninput = function() {
+                    d.qty = this.value;
+                    updateFinanceBatchCalc(bi); // Partial Update
+                    renderFinanceChart();
+                };
+                tQ.appendChild(iQ);
+                tr.appendChild(tQ);
+
+                // Product Select
+                const tP = document.createElement('td');
+                const sP = document.createElement('select');
+                sP.className = 'mini-input';
+                PRODUCT_OPTIONS.forEach(o => {
+                    const op = document.createElement('option');
+                    op.value = o;
+                    op.innerText = o;
+                    if (d.product === o) op.selected = true;
+                    sP.appendChild(op);
+                });
+                sP.onchange = function() {
+                    d.product = this.value;
+                    renderFinanceTable(h, b); // Select needs full re-render
+                    renderFinanceChart();
+                };
+                tP.appendChild(sP);
+                tr.appendChild(tP);
+
+                // Unit Price
+                const pr = PRODUCT_PRICES[d.product] || 0;
+                const tPr = document.createElement('td');
+                tPr.innerHTML = `<span class="readonly-text">${pr.toFixed(2)}</span>`;
+                tr.appendChild(tPr);
+
+                // Subtotal [ID TAGGED]
+                const sub = (parseFloat(d.qty) || 0) * pr;
+                const tSub = document.createElement('td');
+                tSub.innerHTML = `<span id="cell-sub-${bi}-${di}" class="readonly-text">${sub.toFixed(2)}</span>`;
+                tr.appendChild(tSub);
+
+                // 3. Batch Totals (RowSpan)
+                if (di === 0) {
+                    const tT = document.createElement('td'); tT.rowSpan = rc; tT.style.backgroundColor = (bi % 2 === 0) ? '#fff' : '#fcfcfc';
+                    tT.innerHTML = `<strong id="cell-tot-${bi}" style="color:#0071e3">${tot.toFixed(2)}</strong>`;
+                    tr.appendChild(tT);
+
+                    const tAd = document.createElement('td'); tAd.rowSpan = rc; tAd.style.backgroundColor = (bi % 2 === 0) ? '#fff' : '#fcfcfc';
+                    tAd.innerHTML = `<span id="cell-adj-${bi}" style="color:#ff9f0a">${adj.toFixed(2)}</span>`;
+                    tr.appendChild(tAd);
+
+                    const tRv = document.createElement('td'); tRv.rowSpan = rc; tRv.style.backgroundColor = (bi % 2 === 0) ? '#fff' : '#fcfcfc';
+                    tRv.innerHTML = `<strong id="cell-rev-${bi}" style="color:#34c759">${rev.toFixed(2)}</strong>`;
+                    tr.appendChild(tRv);
+
+                    // Collection Status
+                    const tCl = document.createElement('td'); tCl.rowSpan = rc; tCl.style.backgroundColor = bt.collection.checked ? '#eafbf0' : '#fff';
+                    const dCl = document.createElement('div'); dCl.style.display = 'flex'; dCl.style.flexDirection = 'column'; dCl.style.gap = '4px';
+                    const cCl = document.createElement('input'); cCl.type = 'checkbox'; cCl.checked = bt.collection.checked;
+                    cCl.onchange = function() { bt.collection.checked = this.checked; renderFinanceTable(h, b); };
+                    const iCl = document.createElement('input'); iCl.className = 'mini-input date-input'; iCl.placeholder = '收款日期'; iCl.value = bt.collection.date || "";
+                    iCl.oninput = function() { bt.collection.date = this.value; };
+                    dCl.append(cCl, iCl); tCl.appendChild(dCl); tr.appendChild(tCl);
+
+                    // Actions
+                    const tAc = document.createElement('td'); tAc.rowSpan = rc; tAc.style.backgroundColor = (bi % 2 === 0) ? '#fff' : '#fcfcfc';
+                    tAc.innerHTML = `<div style="display:flex;flex-direction:column;gap:5px;align-items:center;"><button class="add-detail-btn" onclick="addFinDetail(${bi})">＋</button><button class="delete-btn" onclick="delFinBatch(${bi})">🗑</button></div>`;
+                    tr.appendChild(tAc);
+                }
+
+                // Delete Detail Button
+                if (rc > 1) {
+                    const x = document.createElement('span'); x.innerText = '×'; x.style.color = 'red'; x.style.cursor = 'pointer'; x.style.marginLeft = '4px';
+                    x.onclick = () => { bt.details.splice(di, 1); renderFinanceTable(h, b); renderFinanceChart(); };
+                    tQ.prepend(x);
+                }
+                b.appendChild(tr);
+            });
+        });
+    }
+
+    // New Function for Partial Updates
+    function updateFinanceBatchCalc(bi) {
+        const batch = GLOBAL_DATA.finance[bi];
+        if(!batch) return;
+        
+        let total = 0;
+        batch.details.forEach((d, di) => {
+            const qty = parseFloat(d.qty) || 0;
+            const price = PRODUCT_PRICES[d.product] || 0;
+            const sub = qty * price;
+            total += sub;
+            
+            // Update Subtotal Cell
+            const cellSub = document.getElementById(`cell-sub-${bi}-${di}`);
+            if(cellSub) cellSub.innerText = sub.toFixed(2);
+        });
+
+        const adj = total * 0.1;
+        const rev = total - adj;
+
+        // Update Batch Cells
+        const cellTot = document.getElementById(`cell-tot-${bi}`);
+        const cellAdj = document.getElementById(`cell-adj-${bi}`);
+        const cellRev = document.getElementById(`cell-rev-${bi}`);
+        
+        if(cellTot) cellTot.innerText = total.toFixed(2);
+        if(cellAdj) cellAdj.innerText = adj.toFixed(2);
+        if(cellRev) cellRev.innerText = rev.toFixed(2);
+    }
+    
+    function renderNcrTable(h, b) {
+        let head=CONFIG_NCR.cols.map((c,i)=>{let w='100px';if(i===3)w='350px';if(i===4)w='250px';return `<th style="width:${w}">${c}</th>`}).join('')+`<th style="width:50px">Del</th>`; h.innerHTML=`<tr>${head}</tr>`; b.innerHTML='';
+        GLOBAL_DATA.ncr.forEach((r,idx)=>{ const tr=document.createElement('tr'); tr.className='ncr-data-row'+(r.solved?' resolved':''); const cell=(k,area)=>{const td=document.createElement('td'); const inp=document.createElement(area?'textarea':'input'); inp.className=area?'auto-resize':'mini-input'; inp.value=r[k]||""; if(area){inp.oninput=function(){autoResize(this);r[k]=this.value};setTimeout(()=>autoResize(inp),0)}else{inp.oninput=function(){r[k]=this.value; if(k==='party') renderNcrChart();}} td.appendChild(inp); return td;}; tr.append(cell('date'),cell('no'),cell('mat'),cell('desc',true),cell('code',true),cell('qty'),cell('party')); const tdDel=document.createElement('td'); const btn=document.createElement('button'); btn.className='delete-btn'; btn.innerHTML='🗑'; btn.onclick=()=>{if(confirm('删除?')){GLOBAL_DATA.ncr.splice(idx,1);renderNcrTable(h,b);renderNcrChart();}}; tdDel.appendChild(btn); tr.appendChild(tdDel); const trS=document.createElement('tr'); trS.className='ncr-status-row'+(r.solved?' resolved':''); const tdS=document.createElement('td'); tdS.colSpan=8; tdS.innerHTML=`<div style="display:flex;justify-content:flex-end;align-items:center;gap:8px"><input type="checkbox" ${r.solved?'checked':''} onchange="GLOBAL_DATA.ncr[${idx}].solved=this.checked;renderNcrTable(document.getElementById('table-head'),document.getElementById('table-body'))"><span style="font-weight:600;color:${r.solved?'#27ae60':'#8e8e93'}">${r.solved?'✅ 已解决':'⬜ 待解决'}</span></div>`; trS.appendChild(tdS); b.append(tr,trS); });
+    }
+    function addNcrRow() { GLOBAL_DATA.ncr.push({date:'',no:'',mat:'',desc:'',code:'',qty:'',party:'',solved:false}); renderNcrTable(document.getElementById('table-head'), document.getElementById('table-body')); renderNcrChart(); }
+
+    function renderNcrChart() {
+        const container = document.getElementById('ncrChartContainer');
+        container.innerHTML = ''; 
+        const counts = {}; let total = 0;
+        GLOBAL_DATA.ncr.forEach(r => { const p = r.party && r.party.trim() ? r.party.trim() : '未定责'; counts[p] = (counts[p] || 0) + 1; total++; });
+        if (total === 0) { container.innerHTML = '<div style="width:100%;text-align:center;padding-top:150px;color:#aaa;">暂无数据</div>'; return; }
+        const sortedParties = Object.keys(counts).sort((a,b) => counts[b] - counts[a]);
+        const colors = ['#e74c3c', '#e67e22', '#8e44ad', '#2980b9', '#16a085', '#f1c40f', '#34495e'];
+        sortedParties.forEach((party, idx) => {
+            const count = counts[party]; const pct = (count / total) * 100;
+            const div = document.createElement('div'); div.className = 'treemap-item';
+            div.style.flexGrow = count; div.style.flexBasis = (pct < 10) ? '10%' : `${pct}%`; 
+            div.style.backgroundColor = colors[idx % colors.length];
+            div.innerHTML = `<div class="treemap-label">${party}</div><div class="treemap-value">${count} (${Math.round(pct)}%)</div>`;
+            container.appendChild(div);
+        });
+    }
+
+    function renderFinanceChart() {
+        if (!GLOBAL_DATA.finance || GLOBAL_DATA.finance.length === 0) return;
+        const ctx = document.getElementById('financeChart').getContext('2d');
+        const labels = GLOBAL_DATA.finance.map(f => f.batchNo || "Unk");
+        const containerData = GLOBAL_DATA.finance.map(f => parseFloat(f.containerQty) || 0);
+        const receivableData = GLOBAL_DATA.finance.map(f => { let total = 0; f.details.forEach(d => { total += (parseFloat(d.qty)||0) * (PRODUCT_PRICES[d.product]||0); }); return total * 0.9; });
+        if (chartInstance) { chartInstance.data.labels = labels; chartInstance.data.datasets[0].data = containerData; chartInstance.data.datasets[1].data = receivableData; chartInstance.update(); } 
+        else { chartInstance = new Chart(ctx, { type: 'bar', data: { labels: labels, datasets: [ { label: '货柜数量 (Containers)', data: containerData, backgroundColor: 'rgba(54, 162, 235, 0.6)', borderColor: 'rgba(54, 162, 235, 1)', borderWidth: 1, yAxisID: 'y' }, { label: '应收金额 (USD)', data: receivableData, type: 'line', borderColor: '#FFD700', backgroundColor: 'rgba(255, 215, 0, 0.2)', borderWidth: 3, yAxisID: 'y1', tension: 0.3 } ] }, options: { responsive: true, maintainAspectRatio: false, scales: { y: { type: 'linear', display: true, position: 'left', title: { display: true, text: '货柜数量' } }, y1: { type: 'linear', display: true, position: 'right', title: { display: true, text: '金额 (USD)' }, grid: { drawOnChartArea: false } } }, plugins: { legend: { position: 'top' }, title: { display: true, text: '财务对账趋势分析' } } } }); }
+    }
+    window.addFinDetail = function(bIdx) { GLOBAL_DATA.finance[bIdx].details.push({ qty: 0, product: 'FIN' }); renderFinanceTable(document.getElementById('table-head'), document.getElementById('table-body')); };
+    window.delFinBatch = function(bIdx) { if(confirm("确定删除此对账单？")) { GLOBAL_DATA.finance.splice(bIdx, 1); renderFinanceTable(document.getElementById('table-head'), document.getElementById('table-body')); renderFinanceChart(); } };
+    function addFinanceBatch() { GLOBAL_DATA.finance.push({ batchNo: 'BPO-', invoice: '', date: '', containerQty: '', details: [{ qty: 0, product: 'FIN' }], solved: false, collection: { checked: false, date: '' } }); renderFinanceTable(document.getElementById('table-head'), document.getElementById('table-body')); renderFinanceChart(); }
+
+    // ================= 6. Canvas =================
+    const canvas = document.getElementById('buildingCanvas');
+    const ctx = canvas.getContext('2d');
+    const DRAW_CFG = { floorHeight: 24, towerWidth: 300, gap: 150, paddingTop: 150, paddingBottom: 50, paddingX: 80, roofHeight: 30 };
+    function resizeCanvas() { if (CTX.module === 'ncr' || CTX.module === 'shipping' || CTX.module === 'finance') return; const totalHeight = COMMON_CFG.floors.length * DRAW_CFG.floorHeight + DRAW_CFG.paddingTop + DRAW_CFG.paddingBottom; const totalWidth = DRAW_CFG.paddingX * 2 + DRAW_CFG.towerWidth * 2 + DRAW_CFG.gap; canvas.width = totalWidth; canvas.height = totalHeight; canvas.style.width = totalWidth + "px"; canvas.style.height = totalHeight + "px"; drawAll(); }
+    function drawAll() { if (CTX.module === 'ncr' || CTX.module === 'shipping' || CTX.module === 'finance') return; ctx.clearRect(0, 0, canvas.width, canvas.height); if (CTX.module === 'order') { drawOrderBuilding('T4 Tower', DRAW_CFG.paddingX); drawOrderBuilding('T5 Tower', DRAW_CFG.paddingX + DRAW_CFG.towerWidth + DRAW_CFG.gap); } else if (CTX.module === 'drawing') { drawDrawingBuilding('T4', DRAW_CFG.paddingX); drawDrawingBuilding('T5', DRAW_CFG.paddingX + DRAW_CFG.towerWidth + DRAW_CFG.gap); drawDrawingLegend(); } else { drawDeliveryBuilding('T4', DRAW_CFG.paddingX); drawDeliveryBuilding('T5', DRAW_CFG.paddingX + DRAW_CFG.towerWidth + DRAW_CFG.gap); drawDeliveryLegend(); } }
+    
+    function drawOrderBuilding(name, x) { const bottomY = canvas.height - DRAW_CFG.paddingBottom; const topY = bottomY - COMMON_CFG.floors.length * DRAW_CFG.floorHeight; const cellWidth = DRAW_CFG.towerWidth / CONFIG_ORDER.cols.length; ctx.fillStyle = '#1d1d1f'; ctx.font = 'bold 18px -apple-system'; ctx.textAlign = 'center'; ctx.fillText(name, x + DRAW_CFG.towerWidth/2, topY - DRAW_CFG.roofHeight - 65); CONFIG_ORDER.cols.forEach((c, idx) => { const cx = x + idx * cellWidth + cellWidth/2; const ly = topY - DRAW_CFG.roofHeight - 15; ctx.fillStyle = c.color; ctx.fillRect(cx - 5, ly - 12, 10, 10); ctx.fillStyle = '#86868b'; ctx.font = '10px -apple-system'; ctx.textAlign = 'center'; ctx.fillText(c.name, cx, ly - 15); ctx.beginPath(); ctx.setLineDash([2, 2]); ctx.moveTo(cx, ly); ctx.lineTo(cx, topY - DRAW_CFG.roofHeight); ctx.strokeStyle = 'rgba(0,0,0,0.05)'; ctx.stroke(); ctx.setLineDash([]); }); ctx.beginPath(); ctx.moveTo(x - 10, topY); ctx.lineTo(x + DRAW_CFG.towerWidth/2, topY - DRAW_CFG.roofHeight); ctx.lineTo(x + DRAW_CFG.towerWidth + 10, topY); ctx.closePath(); ctx.fillStyle = '#2c3e50'; ctx.fill(); COMMON_CFG.floors.forEach((f, idx) => { const y = bottomY - (idx + 1) * DRAW_CFG.floorHeight; ctx.fillStyle = '#86868b'; ctx.textAlign = 'right'; ctx.font = '500 11px -apple-system'; ctx.fillText(f + "F", x - 5, y + 16); CONFIG_ORDER.cols.forEach((c, cIdx) => { const cx = x + cIdx * cellWidth; const item = GLOBAL_DATA.order[f][c.key]; ctx.fillStyle = item.c ? c.color : (idx%2 ? '#fff':'#fafafa'); ctx.fillRect(cx, y, cellWidth, DRAW_CFG.floorHeight); ctx.strokeStyle = 'rgba(0,0,0,0.03)'; ctx.lineWidth = 1; ctx.strokeRect(cx, y, cellWidth, DRAW_CFG.floorHeight); }); }); ctx.strokeStyle = '#2c3e50'; ctx.lineWidth = 1; ctx.strokeRect(x, topY, DRAW_CFG.towerWidth, bottomY - topY); }
+    function drawDrawingBuilding(towerName, x) { const bottomY = canvas.height - DRAW_CFG.paddingBottom; const data = GLOBAL_DATA.drawing[towerName]; ctx.fillStyle = '#1d1d1f'; ctx.font = 'bold 20px -apple-system'; ctx.textAlign = 'center'; ctx.fillText(towerName + " Tower", x + DRAW_CFG.towerWidth/2, DRAW_CFG.paddingTop - 40); ctx.font = '12px -apple-system'; ctx.fillStyle = '#86868b'; ctx.textAlign = 'left'; ctx.fillText("期间 (天)", x + DRAW_CFG.towerWidth + 10, DRAW_CFG.paddingTop - 10); COMMON_CFG.floors.forEach((f, idx) => { const y = bottomY - (idx + 1) * DRAW_CFG.floorHeight; const item = data[f]; let bg = '#fff'; if (item.subC) bg = '#3498db'; if (item.apprC) bg = '#27ae60'; ctx.fillStyle = bg; ctx.fillRect(x, y, DRAW_CFG.towerWidth, DRAW_CFG.floorHeight); ctx.strokeStyle = 'rgba(0,0,0,0.1)'; ctx.lineWidth = 1; ctx.strokeRect(x, y, DRAW_CFG.towerWidth, DRAW_CFG.floorHeight); ctx.fillStyle = '#1d1d1f'; ctx.textAlign = 'right'; ctx.font = '600 11px -apple-system'; ctx.fillText(f + "F", x - 5, y + 16); const textColor = (bg === '#fff') ? '#86868b' : '#fff'; if (item.plan) { ctx.fillStyle = textColor; ctx.textAlign = 'left'; ctx.font = '11px -apple-system'; ctx.fillText(item.plan, x + 8, y + 16); } let finishDate = item.apprC ? item.apprD : (item.subC ? item.subD : ""); if (finishDate) { ctx.fillStyle = textColor; ctx.textAlign = 'right'; ctx.font = 'bold 11px -apple-system'; ctx.fillText(finishDate, x + DRAW_CFG.towerWidth - 8, y + 16); } let durationText = ""; let durationColor = "#86868b"; if (!item.apprC) { if (!item.subC) { const diff = getDaysDiff(item.plan); if (diff !== null) { if (diff > 0) { durationText = `延期 ${diff} 天`; durationColor = "#ff3b30"; } else { durationText = `剩余 ${Math.abs(diff)} 天`; durationColor = "#34c759"; } } } else { const diff = getDaysDiff(item.subD); if (diff !== null && diff >= 0) { durationText = `等待 ${diff} 天`; durationColor = "#ff9f0a"; } } } if (durationText) { ctx.fillStyle = durationColor; ctx.textAlign = 'left'; ctx.font = '11px -apple-system'; ctx.fillText(durationText, x + DRAW_CFG.towerWidth + 10, y + 16); } }); ctx.strokeStyle = '#2c3e50'; ctx.lineWidth = 2; ctx.strokeRect(x, bottomY - COMMON_CFG.floors.length * DRAW_CFG.floorHeight, DRAW_CFG.towerWidth, COMMON_CFG.floors.length * DRAW_CFG.floorHeight); }
+    
+    // [OPTIMIZED] Draw Delivery Building with new hollow logic and Volume icon
+    function drawDeliveryBuilding(towerName, x) { 
+        const bottomY = canvas.height - DRAW_CFG.paddingBottom; 
+        const data = GLOBAL_DATA.delivery[towerName]; 
+        const C = { prodA: '#ff7f50', prodB: '#1abc9c', shipA: '#2ecc71', shipB: '#27ae60' }; 
+        
+        ctx.fillStyle = '#1d1d1f'; ctx.font = 'bold 20px -apple-system'; ctx.textAlign = 'center'; 
+        ctx.fillText(towerName + " Tower", x + DRAW_CFG.towerWidth/2, DRAW_CFG.paddingTop - 40); 
+        ctx.font = '12px -apple-system'; ctx.fillStyle = '#86868b'; ctx.textAlign = 'left'; 
+        ctx.fillText("进度/柜量", x + DRAW_CFG.towerWidth + 10, DRAW_CFG.paddingTop - 10); 
+        
+        COMMON_CFG.floors.forEach((f, idx) => { 
+            const y = bottomY - (idx + 1) * DRAW_CFG.floorHeight; 
+            const item = data[f]; 
+            
+            let colorA, colorB, isHollow = false;
+            
+            if (item.shipC) { colorA = C.shipA; colorB = C.shipB; } 
+            else if (item.prodC) { colorA = C.prodA; colorB = C.prodB; }
+            else { isHollow = true; } // Planned state = Hollow
+
+            if (!isHollow && item.total > 0) { 
+                const widthA = (item.typeA / item.total) * DRAW_CFG.towerWidth; 
+                const widthB = DRAW_CFG.towerWidth - widthA; 
+                ctx.fillStyle = colorA; ctx.fillRect(x, y, widthA, DRAW_CFG.floorHeight); 
+                ctx.fillStyle = colorB; ctx.fillRect(x + widthA, y, widthB, DRAW_CFG.floorHeight); 
+                ctx.strokeStyle = 'rgba(0,0,0,0.1)'; ctx.setLineDash([]);
+            } else { 
+                ctx.fillStyle = '#ffffff'; 
+                ctx.fillRect(x, y, DRAW_CFG.towerWidth, DRAW_CFG.floorHeight); 
+                ctx.strokeStyle = '#d1d5db'; ctx.setLineDash([4, 2]); // Dashed border for hollow
+            } 
+            
+            ctx.lineWidth = 1; 
+            ctx.strokeRect(x, y, DRAW_CFG.towerWidth, DRAW_CFG.floorHeight); 
+            ctx.setLineDash([]); // Reset dash
+
+            // Floor Number
+            ctx.fillStyle = '#1d1d1f'; ctx.textAlign = 'right'; ctx.font = '600 11px -apple-system'; 
+            ctx.fillText(f + "F", x - 5, y + 16); 
+            
+            // ETD on left
+            if (item.etd) { 
+                ctx.fillStyle = '#34495e'; ctx.textAlign = 'left'; ctx.font = '11px -apple-system'; 
+                ctx.fillText(item.etd, x + 8, y + 16); 
+            } 
+            
+            // Ship Date or status on right
+            let dateText = item.shipD; 
+            let isShipped = item.shipC; 
+            if (isShipped && item.realShipD) { dateText = "✔ " + item.realShipD; } 
+            if (dateText) { 
+                ctx.fillStyle = '#34495e'; ctx.textAlign = 'right'; ctx.font = 'bold 11px -apple-system'; 
+                ctx.fillText(dateText, x + DRAW_CFG.towerWidth - 8, y + 16); 
+            } 
+            
+            // Info text (Status + Volume)
+            let infoTextParts = [];
+            
+            // 1. Status Text
+            let durationColor = "#86868b"; 
+            if (item.etd) { 
+                if (isShipped && item.realShipD) { 
+                    const diff = getDaysBetween(item.etd, item.realShipD); 
+                    if (diff !== null) { 
+                        if (diff > 0) { infoTextParts.push(`延期 ${diff}天`); durationColor = "#ff3b30"; } 
+                        else { infoTextParts.push(`完成`); durationColor = "#34c759"; } 
+                    } 
+                } else if (item.shipD) { 
+                    const diff = getDaysBetween(item.etd, item.shipD); 
+                    if (diff !== null) { 
+                        if (diff > 0) { infoTextParts.push(`延后 ${diff}天`); durationColor = "#ff9f0a"; } 
+                        else { infoTextParts.push(diff === 0 ? "准时" : `提前 ${Math.abs(diff)}天`); durationColor = "#34c759"; } 
+                    } 
+                } 
+            } 
+            
+            // 2. Volume Icon [NEW]
+            if (item.volume > 0) {
+                 infoTextParts.push(`📦 ${item.volume}`);
+            }
+
+            if (infoTextParts.length > 0) { 
+                ctx.fillStyle = durationColor; 
+                ctx.textAlign = 'left'; 
+                ctx.font = '11px -apple-system'; 
+                ctx.fillText(infoTextParts.join(" | "), x + DRAW_CFG.towerWidth + 10, y + 16); 
+            } 
+        }); 
+        
+        ctx.strokeStyle = '#2c3e50'; ctx.lineWidth = 2; 
+        ctx.strokeRect(x, bottomY - COMMON_CFG.floors.length * DRAW_CFG.floorHeight, DRAW_CFG.towerWidth, COMMON_CFG.floors.length * DRAW_CFG.floorHeight); 
+    }
+
+    function drawDrawingLegend() { const cy = 40; const cx = canvas.width / 2; ctx.textAlign = 'center'; ctx.font = '12px -apple-system'; ctx.fillStyle = '#3498db'; ctx.fillRect(cx - 100, cy, 15, 15); ctx.fillStyle = '#333'; ctx.fillText("已提交", cx - 60, cy + 12); ctx.fillStyle = '#27ae60'; ctx.fillRect(cx + 20, cy, 15, 15); ctx.fillStyle = '#333'; ctx.fillText("已批复 (完成)", cx + 80, cy + 12); }
+    
+    // [OPTIMIZED] Updated legend for hollow Planned state
+    function drawDeliveryLegend() { 
+        const cy = 40; const cx = canvas.width / 2; ctx.textAlign = 'center'; ctx.font = '12px -apple-system'; 
+        
+        // Hollow Legend
+        ctx.fillStyle = '#fff'; ctx.fillRect(cx - 160, cy, 12, 12); 
+        ctx.strokeStyle = '#999'; ctx.lineWidth = 1; ctx.setLineDash([2,2]); ctx.strokeRect(cx - 160, cy, 12, 12); ctx.setLineDash([]);
+        ctx.fillStyle = '#555'; ctx.fillText("计划中", cx - 120, cy + 10); 
+        
+        ctx.fillStyle = '#ff7f50'; ctx.fillRect(cx - 60, cy, 12, 12); 
+        ctx.fillStyle = '#1abc9c'; ctx.fillRect(cx - 48, cy, 12, 12); 
+        ctx.fillStyle = '#555'; ctx.fillText("已排产", cx - 20, cy + 10); 
+        
+        ctx.fillStyle = '#2ecc71'; ctx.fillRect(cx + 40, cy, 12, 12); 
+        ctx.fillStyle = '#27ae60'; ctx.fillRect(cx + 52, cy, 12, 12); 
+        ctx.fillStyle = '#555'; ctx.fillText("已发货", cx + 80, cy + 10); 
+    }
+
+    function getDaysBetween(strA, strB) { const dA = new Date(strA); const dB = new Date(strB); if (isNaN(dA) || isNaN(dB)) return null; return Math.ceil((dB - dA) / (1000 * 60 * 60 * 24)); }
+    function getDaysDiff(strA) { const today = new Date(); today.setHours(0,0,0,0); const target = new Date(strA); if (isNaN(target)) return null; return Math.ceil((today - target) / (1000 * 60 * 60 * 24)); }
+
+    // ================= 7. File IO =================
+    function exportToExcel() {
+        const wb = XLSX.utils.book_new();
+        let moduleName = "";
+        
+        if (CTX.module === 'order') {
+            moduleName = CONFIG_ORDER.title;
+            const wsData = [['楼层', ...CONFIG_ORDER.cols.flatMap(c=>[c.name+'-状态', c.name+'-备注'])]];
+            COMMON_CFG.floors.forEach(f => { const r = [f]; CONFIG_ORDER.cols.forEach(c => { r.push(GLOBAL_DATA.order[f][c.key].c ? "1":""); r.push(GLOBAL_DATA.order[f][c.key].t); }); wsData.push(r); });
+            XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(wsData), "下单进度");
+        } else if (CTX.module === 'drawing') {
+            moduleName = CONFIG_DRAWING.title;
+            const legend = [["说明"], ["计划提交", "不可编辑"], ["...","..."],[]];
+            const header = ['楼栋','楼层','计划提交时间','提交状态','提交日期','批复状态','批复日期'];
+            let rows = []; ['T4', 'T5'].forEach(t => COMMON_CFG.floors.forEach(f => { const i = GLOBAL_DATA.drawing[t][f]; rows.push([t,f,i.plan,i.subC?"1":"",i.subD,i.apprC?"1":"",i.apprD]); }));
+            XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([...legend, header, ...rows]), "加工图");
+        } else if (CTX.module === 'delivery') {
+            moduleName = CONFIG_DELIVERY.title;
+            const legend = [["数据说明"], ["ETD","预计离港"], ["A/B类型","不可编辑"],[]];
+            // [OPTIMIZED] Added Volume header
+            const header = ['楼栋','楼层','总数量','A类型','B类型','柜量', 'ETD','已排产','计划发货','已发货','发货日期'];
+            let rows = []; ['T4', 'T5'].forEach(t => COMMON_CFG.floors.forEach(f => { const i = GLOBAL_DATA.delivery[t][f]; rows.push([t,f,i.total,i.typeA,i.typeB, i.volume||0, i.etd,i.prodC?"1":"",i.shipD,i.shipC?"1":"",i.realShipD]); }));
+            XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([...legend, header, ...rows]), "交付计划");
+        } else if (CTX.module === 'ncr') {
+            moduleName = CONFIG_NCR.title;
+            const legend = [["数据说明"], ["NCR No.","唯一编号"], ["状态","1=已解决, 0=未解决"], []];
+            const header = [...CONFIG_NCR.cols, "当前状态 (Resolved)"];
+            let rows = []; GLOBAL_DATA.ncr.forEach(r => rows.push([r.date, r.no, r.mat, r.desc, r.code, r.qty, r.party, r.solved?"1":"0"]));
+            XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([...legend, header, ...rows]), "NCR记录");
+        } else if (CTX.module === 'shipping') {
+            moduleName = CONFIG_SHIPPING.title;
+            const header = CONFIG_SHIPPING.cols;
+            let rows = []; 
+            GLOBAL_DATA.shipping.forEach(batch => {
+                batch.details.forEach(det => {
+                    rows.push([batch.batch, '', batch.loadingDate, batch.pol, batch.etd, batch.eta, batch.atd, batch.ata, det.qty, det.size, det.factory]);
+                });
+            });
+            XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([header, ...rows]), "船期记录");
+        } else if (CTX.module === 'finance') {
+            moduleName = CONFIG_FINANCE.title;
+            const header = CONFIG_FINANCE.cols;
+            let rows = [];
+            GLOBAL_DATA.finance.forEach(batch => {
+                const batchTotal = batch.details.reduce((s,d)=>s+((parseFloat(d.qty)||0)*(PRODUCT_PRICES[d.product]||0)),0);
+                const adj = batchTotal * 0.1;
+                const recv = batchTotal - adj;
+                batch.details.forEach(det => {
+                    const price = PRODUCT_PRICES[det.product] || 0;
+                    const sub = (parseFloat(det.qty)||0) * price;
+                    rows.push([
+                        batch.batchNo, batch.invoice, batch.date, batch.containerQty,
+                        det.qty, det.product, price.toFixed(2), sub.toFixed(2),
+                        batchTotal.toFixed(2), adj.toFixed(2), recv.toFixed(2),
+                        batch.solved ? "已结清" : "待处理",
+                        batch.collection && batch.collection.checked ? `已收款 (${batch.collection.date})` : "未收款"
+                    ]);
+                });
+            });
+            XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([header, ...rows]), "财务对账");
+        }
+        const fileName = `BPO_${moduleName}_${getBeijingTimeStr()}.xlsx`;
+        XLSX.writeFile(wb, fileName);
+        setModuleFileHistory(CTX.module, 'export', fileName);
+    }
+
+    function handleFileImport(input) {
+        const file = input.files[0]; if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const wb = XLSX.read(new Uint8Array(e.target.result), {type:'array'});
+            const data = XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]], {header:1, raw: false, dateNF: 'yyyy-mm-dd'});
+            let success = false;
+            
+            function findHeaderRow(keywords) {
+                for(let i=0; i<Math.min(data.length, 20); i++) {
+                    const rowStr = data[i].join(" ").toLowerCase();
+                    if (keywords.every(k => rowStr.includes(k.toLowerCase()))) return i;
+                }
+                return -1;
+            }
+
+            if (CTX.module === 'finance') {
+                let hIdx = findHeaderRow(['批次号', '发票', '产品']);
+                if (hIdx !== -1) {
+                    if(confirm("导入将覆盖现有财务记录，确认吗？")) {
+                        const header = data[hIdx];
+                        const map = { b:-1, inv:-1, d:-1, cq:-1, q:-1, p:-1, s:-1, cs:-1 };
+                        header.forEach((val, i) => {
+                            const txt = String(val).trim();
+                            if(txt.includes("批次")) map.b=i; if(txt.includes("发票")) map.inv=i;
+                            if(txt.includes("日期")) map.d=i; if(txt.includes("货柜")) map.cq=i;
+                            if(txt.includes("数量") && !txt.includes("货柜")) map.q=i; 
+                            if(txt.includes("产品")) map.p=i; if(txt.includes("状态")) map.s=i;
+                            if(txt.includes("收款状态")) map.cs=i; 
+                        });
+                        GLOBAL_DATA.finance = [];
+                        for(let i=hIdx+1; i<data.length; i++) {
+                            const r = data[i]; const batchNo = r[map.b];
+                            if (batchNo) {
+                                let existingBatch = GLOBAL_DATA.finance.find(b => b.batchNo === batchNo);
+                                if (!existingBatch) {
+                                    const isSolved = (map.s!==-1 && (String(r[map.s]).includes("已结") || r[map.s]==1));
+                                    let collChecked = false, collDate = "";
+                                    if (map.cs !== -1 && r[map.cs]) {
+                                        const cStr = String(r[map.cs]);
+                                        if (cStr.includes("已收款")) {
+                                            collChecked = true;
+                                            const match = cStr.match(/\((.*?)\)/);
+                                            if (match) collDate = match[1];
+                                        }
+                                    }
+                                    existingBatch = {
+                                        batchNo: batchNo, invoice: r[map.inv]||"", date: cleanDate(r[map.d]), 
+                                        containerQty: r[map.cq]||"", solved: isSolved, 
+                                        collection: { checked: collChecked, date: collDate },
+                                        details: []
+                                    };
+                                    GLOBAL_DATA.finance.push(existingBatch);
+                                }
+                                existingBatch.details.push({ qty: parseInt(r[map.q])||0, product: r[map.p]||"FIN" });
+                            }
+                        }
+                        success = true;
+                    }
+                }
+            }
+            else if (CTX.module === 'shipping') { let hIdx = findHeaderRow(['批次号', '出发港']); if (hIdx !== -1) { if(confirm("导入将覆盖现有船期记录，确认吗？")) { const header = data[hIdx]; const map = { b:-1, q:-1, s:-1, f:-1, ld:-1, p:-1, etd:-1, atd:-1, eta:-1, ata:-1 }; header.forEach((val, i) => { const txt = String(val).trim(); if(txt.includes("批次")) map.b=i; if(txt.includes("数量")) map.q=i; if(txt.includes("尺寸")) map.s=i; if(txt.includes("地点")||txt.includes("工厂")) map.f=i; if(txt.includes("装柜时间")) map.ld=i; if(txt.includes("出发港")) map.p=i; if(txt.includes("计划开船")||txt.includes("ETD")) map.etd=i; if(txt.includes("实际开船")||txt.includes("ATD")) map.atd=i; if(txt.includes("计划到港")||txt.includes("ETA")) map.eta=i; if(txt.includes("实际到港")||txt.includes("ATA")) map.ata=i; }); GLOBAL_DATA.shipping = []; for(let i=hIdx+1; i<data.length; i++) { const r = data[i]; const batchNo = r[map.b]; if (batchNo) { let existingBatch = GLOBAL_DATA.shipping.find(b => b.batch === batchNo); if (!existingBatch) { existingBatch = { batch: batchNo, loadingDate: cleanDate(r[map.ld]), pol: r[map.p]||"", etd: cleanDate(r[map.etd]), atd: cleanDate(r[map.atd]), eta: cleanDate(r[map.eta]), ata: cleanDate(r[map.ata]), details: [] }; GLOBAL_DATA.shipping.push(existingBatch); } existingBatch.details.push({ qty: parseInt(r[map.q]) || 1, size: r[map.s] || '40尺', factory: r[map.f] || "" }); } } success = true; } } }
+            else if (CTX.module === 'ncr') { let hIdx=findHeaderRow(['NCR','日期']); if(hIdx!==-1&&confirm("覆盖NCR?")){ GLOBAL_DATA.ncr=[]; const m={d:-1,n:-1,ma:-1,ds:-1,c:-1,q:-1,p:-1,s:-1}; data[hIdx].forEach((v,i)=>{const t=String(v);if(t.includes('日期'))m.d=i;if(t.includes('NCR'))m.n=i;if(t.includes('材料'))m.ma=i;if(t.includes('描述'))m.ds=i;if(t.includes('Code'))m.c=i;if(t.includes('数量'))m.q=i;if(t.includes('责任'))m.p=i;if(t.includes('状态'))m.s=i;}); for(let i=hIdx+1;i<data.length;i++){const r=data[i];if(!r[m.n])continue;GLOBAL_DATA.ncr.push({date:cleanDate(r[m.d]),no:r[m.n],mat:r[m.ma]||"",desc:r[m.ds]||"",code:r[m.c]||"",qty:r[m.q]||"",party:r[m.p]||"",solved:(m.s!==-1&&(r[m.s]==1||r[m.s]=="1"))})} success=true; } }
+            else if (CTX.module === 'delivery') { 
+                let hIdx=findHeaderRow(['楼栋','ETD']); 
+                if(hIdx!==-1){ 
+                    // [OPTIMIZED] Added Volume import mapping
+                    const m={t:-1,f:-1,a:-1,b:-1,e:-1,p:-1,s:-1,rc:-1,rd:-1, vol:-1}; 
+                    data[hIdx].forEach((v,i)=>{
+                        const t=String(v);
+                        if(t.includes('楼栋'))m.t=i; if(t.includes('楼层'))m.f=i;
+                        if(t.includes('A类'))m.a=i; if(t.includes('B类'))m.b=i;
+                        if(t.includes('柜量'))m.vol=i;
+                        if(t.includes('ETD'))m.e=i; if(t.includes('排产'))m.p=i;
+                        if(t.includes('计划发'))m.s=i; if(t.includes('已发'))m.rc=i; if(t.includes('发货日'))m.rd=i;
+                    }); 
+                    for(let i=hIdx+1;i<data.length;i++){
+                        const r=data[i]; const t=r[m.t]; const f=parseInt(String(r[m.f]).replace(/\D/g,''));
+                        if(GLOBAL_DATA.delivery[t]&&GLOBAL_DATA.delivery[t][f]){
+                            const it=GLOBAL_DATA.delivery[t][f];
+                            if(m.a!==-1)it.typeA=parseInt(r[m.a]); if(m.b!==-1)it.typeB=parseInt(r[m.b]); it.total=(it.typeA||0)+(it.typeB||0);
+                            if(m.vol!==-1)it.volume=parseInt(r[m.vol])||0;
+                            if(m.e!==-1)it.etd=cleanDate(r[m.e]); if(m.p!==-1)it.prodC=(r[m.p]==1);
+                            if(m.s!==-1)it.shipD=cleanDate(r[m.s]); if(m.rc!==-1)it.shipC=(r[m.rc]==1); if(m.rd!==-1)it.realShipD=cleanDate(r[m.rd]);
+                        }
+                    } 
+                    success=true; 
+                } 
+            }
+            else if (CTX.module === 'drawing') { let hIdx=findHeaderRow(['楼栋','提交状态']); if(hIdx!==-1){ const m={t:-1,f:-1,p:-1,ss:-1,sd:-1,as:-1,ad:-1}; data[hIdx].forEach((v,i)=>{const t=String(v);if(t.includes('楼栋'))m.t=i;if(t.includes('楼层'))m.f=i;if(t.includes('计划'))m.p=i;if(t.includes('提交状'))m.ss=i;if(t.includes('提交日'))m.sd=i;if(t.includes('批复状'))m.as=i;if(t.includes('批复日'))m.ad=i;}); for(let i=hIdx+1;i<data.length;i++){const r=data[i];const t=r[m.t];const f=parseInt(String(r[m.f]).replace(/\D/g,''));if(GLOBAL_DATA.drawing[t]&&GLOBAL_DATA.drawing[t][f]){const it=GLOBAL_DATA.drawing[t][f];if(m.p!==-1)it.plan=cleanDate(r[m.p]);if(m.ss!==-1)it.subC=(r[m.ss]==1);if(m.sd!==-1)it.subD=cleanDate(r[m.sd]);if(m.as!==-1)it.apprC=(r[m.as]==1);if(m.ad!==-1)it.apprD=cleanDate(r[m.ad]);}} success=true; } }
+            else if (CTX.module === 'order') { let hIdx=findHeaderRow(['楼层','型材']); if(hIdx!==-1){ const m={f:-1,c:{}}; data[hIdx].forEach((v,i)=>{const t=String(v);if(t.includes('楼层')||t==='F')m.f=i;CONFIG_ORDER.cols.forEach(cl=>{if(!m.c[cl.key])m.c[cl.key]={s:-1,r:-1};if(t.includes(cl.name)&&t.includes('状态'))m.c[cl.key].s=i;if(t.includes(cl.name)&&t.includes('备注'))m.c[cl.key].r=i;});}); if(m.f!==-1){for(let i=hIdx+1;i<data.length;i++){const r=data[i];const f=parseInt(String(r[m.f]).replace(/\D/g,''));if(COMMON_CFG.floors.includes(f)){CONFIG_ORDER.cols.forEach(cl=>{const idx=m.c[cl.key];if(idx.s!==-1){const v=r[idx.s];GLOBAL_DATA.order[f][cl.key].c=(v==1||v=='1'||v===true);}if(idx.r!==-1){GLOBAL_DATA.order[f][cl.key].t=r[idx.r]||"";}})}} success=true; } } }
+
+            if (success) {
+                initTable(); 
+                if (CTX.module !== 'ncr' && CTX.module !== 'shipping' && CTX.module !== 'finance') resizeCanvas();
+                if (CTX.module === 'finance') renderFinanceChart(); 
+                if (CTX.module === 'ncr') renderNcrChart(); 
+                alert("✅ 导入成功！");
+                setModuleFileHistory(CTX.module, 'import', file.name);
+            } else { alert("❌ 导入失败：未找到有效表头"); }
+            input.value = '';
+        };
+        reader.readAsArrayBuffer(file);
+    }
+
+    // Save Logic
+    function showSaveModal() { document.getElementById('save-modal').classList.remove('hidden'); }
+    function closeSaveModal() { document.getElementById('save-modal').classList.add('hidden'); }
+    function confirmSave() {
+        const name = document.getElementById('relay-name').value.trim();
+        const note = document.getElementById('relay-note').value.trim();
+        if (!name) { alert("请填写姓名"); return; }
+        const nowStr = getBeijingTimeStr(); 
+        if (!GLOBAL_DATA.meta) GLOBAL_DATA.meta = { history: [] };
+        GLOBAL_DATA.meta.history.push({ user: name, time: new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' }), note: note });
+        
+        document.getElementById('save-modal').classList.add('hidden');
+        document.getElementById('view-module').classList.add('hidden');
+        document.getElementById('view-home').classList.remove('hidden');
+        
+        let htmlContent = document.documentElement.outerHTML;
+        let dataJson = JSON.stringify(GLOBAL_DATA);
+        htmlContent = htmlContent.replace(/const savedSnapshot = .*?;/, `const savedSnapshot = ${dataJson};`);
+        const blob = new Blob([htmlContent], {type: "text/html"});
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = `菲律宾BPO仪表盘_${nowStr}_${name}.html`;
+        link.click();
+        renderRelayInfo(); alert("文件已生成！");
+    }
+
+    window.onload = function() {
+        document.getElementById('save-modal').classList.add('hidden');
+        document.getElementById('view-module').classList.add('hidden');
+        document.getElementById('view-home').classList.remove('hidden');
+        if(GLOBAL_DATA.meta) renderFileStatus();
+        updateWatermark("DASHBOARD HOME");
+        renderDashboardStats();
+    };
+</script>
+
+</body></html>
